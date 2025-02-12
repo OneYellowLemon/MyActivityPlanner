@@ -1,4 +1,6 @@
-# IT4045C Enterprise Application Development
+# My Activity Planner
+
+IT4045C Enterprise Application Development
 
 ## Introduction
 
