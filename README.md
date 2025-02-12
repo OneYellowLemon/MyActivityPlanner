@@ -4,7 +4,9 @@ IT4045C Enterprise Application Development
 
 ## Introduction
 
-<!-- Introduction paragraph. Jacob will create this -->
+My Activity Planner is an application for individuals living in assisted living that allows them to see list of activities for a given day and sign up for them.
+An administration page allows management of the activities, including creating new activities, editing existing activities, and deleting activities.
+Users of the app can view activities day by day with details including the activity name, date and time, location, and description. Users can sign up for activities, view the activities they have signed up for, and withdraw from activities.
 
 ## Storyboard
 
