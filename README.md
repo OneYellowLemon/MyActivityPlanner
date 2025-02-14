@@ -191,7 +191,7 @@ You can create a schema from a Java class at QuickType.io.  This Java class is t
 
 ## Project Link
 
-https://github.com/OneYellowLemon/IT4045C
+https://github.com/OneYellowLemon/MyActivityPlanner
 
 ## Milestones
 
