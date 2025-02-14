@@ -245,10 +245,54 @@ IUserDAO:
 
 ## JSON Schema
 
-<!--  Your project should have an REST endpoint that emits JSON, which another group can consume.  The design document should contain a draft JSON schema for this endpoint.
-You can create a schema from a Java class at QuickType.io.  This Java class is typically a DTO.  That's all you need at this point. -->
+JSON schema for use in a third-party app. This provides full information about a user's "My Activity List":
 
-<!-- Jacob thoughts: we can export events on "My Activity List" -->
+```json
+{
+  "type": "object",
+  "properties": {
+    "userId": {
+      "type": "integer"
+    },
+    "activities": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "name": {
+              "type": "string"
+            },
+            "description": {
+              "type": "string"
+            },
+            "location": {
+              "type": "string"
+            },
+            "timestamp": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "id",
+            "name",
+            "description",
+            "location",
+            "timestamp"
+          ]
+        }
+      ]
+    }
+  },
+  "required": [
+    "userId",
+    "activities"
+  ]
+}
+```
 
 ## Scrum roles
 
