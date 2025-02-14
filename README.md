@@ -183,9 +183,9 @@ You can create a schema from a Java class at QuickType.io.  This Java class is t
 
 ## Scrum roles
 
-**UI Specialists**:
+**UI Specialists**: Abdoul S, Brian M
 
-**Business Logic/Persistence Specialists**:
+**Business Logic/Persistence Specialists**: Evan S, Jacob G
 
 **Product Owner/Scrum Master/DevOps Specialist**: Jacob G
 
