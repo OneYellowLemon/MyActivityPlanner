@@ -168,11 +168,80 @@ Users of the app can view activities day by day with details including the activ
 
 ## Class Diagram
 
-<!-- Insert image of UML-based class diagram here -->
+![Class diagram for My Activity Planner](ClassDiagram.png)
 
-### Class Diagram Description
+[View it on LucidChart](https://lucid.app/lucidchart/182d23de-7ba1-4009-b43e-6455d03dbf5d/edit?invitationId=inv_3bcc0d16-4830-4a5c-ab85-9cdeda8fb1b8)
 
-<!-- Class Diagram Description: One or two lines for each class to describe use of interfaces, classes and resources, interfaces, etc. Don't worry about putting more than a few words to each class; this does not need to be thorough. -->
+### Class Diagram Descriptions
+
+#### Classes:
+
+```
+com.myactivityplanner.enterprise:
+- EnterpriseApplication: Start up application server
+- ActivityController: Endpoints for working with activities
+- UserController: Endpoints for working with users
+
+com.myactivityplanner.enterprise.dto:
+- User: Store user information
+- Activity: Store activity information
+
+com.myactivityplanner.enterprise.service:
+- ActivityServiceStub: Stub class for activity service
+- ActivityService: Handle business logic for activities
+- UserServiceStub: Stub class for user service
+- UserService: Handle business logic for users
+
+com.myactivityplanner.enterprise.dao:
+- UserActivityDAO: Handle persistence for mapping users to activities
+- UserActivityDAOStub: Stub class for persisting the mappings between users and activities
+- ActivityDAO: Handle persistence for activities
+- ActivityDAOStub: Stub class for activity persistence
+- UserDAO: Handle persistence for users
+- UserDAOStub: Stub class for user persistence
+```
+
+#### Interfaces:
+
+```
+com.myactivityplanner.enterprise.service:
+- IActivityService: Interface for activity service; to be implemented by ActivityService
+- IUserService: Interface for user service; to be implemented by UserService
+
+com.myactivityplanner.enterprise.dao:
+- IActivityDAO: Interface for persisting activities; to be implemented by ActivityDAO
+- IUserDAO: Interface for persisting users; to be implemented by UserDAO
+```
+
+#### Methods:
+
+```
+IActivityService:
+- getUsersSignedUpForActivity(activityId: int): List<User> - Returns a list of users who have signed up for a specific activity
+- getActivitiesForDate(date: java.util.Date): List<Activity> - Returns a list of Activity objects that occur on the specified Date
+- getSignedUpActivitiesForUser(userId: int): List<Activity> - Returns a list of Activity objects that the specified user has signed up for.
+- isUserSignedUpForActivity(userId: int, activityId: int): boolean - Returns true if the specified user is signed up for the specified activity
+- signUpForActivity(activityId: int, userId: int): boolean - Signs the specified user up for the specified activity
+- withdrawFromActivity(activityId: int, userId: int): boolean
+
+IUserService:
+- getUserName(userId: int): String - Return the full name of the specified user in the format firstname, lastname
+
+IUserActivityDAO:
+- isUserSignedUpForActivity(userId: int, activityId: int): boolean - Returns true if the specified user is signed up for the specified activity
+- signUpUser(userId: int, activityId: int): boolean - Creates a record in the UserActivity table with the specified userId and activityId. Returns true if successful.
+- withdrawUser(userId: int, activityId: int): boolean - Deletes a record in the UserActivity table with the specified userId and activityId. Returns true if successful.
+
+IActivityDAO:
+- getActivity(activityId: int): Activity - Returns an Activity object by ID
+- getActivities(): List<Activity> - Returns a list of all Activity objects
+- saveActivity(activity: Activity): boolean - Update an existing Activity if it exists, otherwise, create a new Activity. Returns true if successful, otherwise, false.
+- deleteActivity(activityId: int): boolean - Delete an Activity. Returns true if successful, otherwise, false.
+
+IUserDAO:
+- createUser(firstName: String, lastName: String): boolean - Create a new User with the specified first and last name. Returns true if successful, otherwise, false.
+- getUser(userId: int): User - Get a user by ID
+```
 
 ## JSON Schema
 
