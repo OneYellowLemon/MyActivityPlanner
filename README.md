@@ -199,4 +199,7 @@ https://github.com/OneYellowLemon/IT4045C
 
 ## Standup Meeting
 
-<!-- Link to standup meeting once created -->
+We meet every Wednesday at 4:30 pm EST.
+
+> [!NOTE]
+> Link not public due to public repository. Link has been shared with team.
