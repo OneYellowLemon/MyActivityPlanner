@@ -356,7 +356,7 @@ https://github.com/OneYellowLemon/MyActivityPlanner
 
 ## Milestones
 
-<!-- Links to milestones once created -->
+[Milestone 1](https://github.com/OneYellowLemon/MyActivityPlanner/milestone/1)
 
 ## Standup Meeting
 
@@ -368,6 +368,8 @@ We meet every Wednesday at 4:30 pm EST.
 <details>
     <summary>Why is it not public?</summary>
 
-    As this is a public repository, we do not want our standup link public. As per the assignment instructions: If your repo is public, and  you prefer not to put the Teams link there, no problem... just email it to me and your group members.  However, you should still list the date and time of your weekly meeting(s).
+    As this is a public repository, we do not want our standup link public.
+    
+    As per the assignment instructions: If your repo is public, and you prefer not to put the Teams link there, no problem... just email it to me and your group members. However, you should still list the date and time of your weekly meeting(s).
 
 </details>
