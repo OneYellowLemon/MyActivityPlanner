@@ -14,9 +14,39 @@ Users of the app can view activities day by day with details including the activ
 
 ## Functional Requirements
 
-### 1. As a user, I can view a list of all upcoming activities today
+### 1. A user of the application can "log in" as a specific user ID
 
 **Given**: The application is not open
+
+**When**: The application is loaded to the default page
+
+**Then**: The user is prompted to enter a user ID
+
+---
+
+### 2. The user of the application can act as a specific user
+
+**Given**: The application is open to the default page
+
+**When**: The user enters their user ID
+
+**Then**: The user of the application performs tasks as that user ID
+
+---
+
+### 3. The user of the application can only act as a valid user ID
+
+**Given**: The application is open to the default page
+
+**When**: The user enters an invalid user ID
+
+**Then**: An error message is shown stating "This user does not exist!"
+
+---
+
+### 4. As a user, I can view a list of all upcoming activities today
+
+**Given**: The user has authenticated
 
 **When**: The application is loaded to the default page
 
@@ -24,7 +54,7 @@ Users of the app can view activities day by day with details including the activ
 
 ---
 
-**Given**: A date other than today is currently selected
+**Given**: The user has authenticated, and a date other than today is currently selected
 
 **When**: The user clicks on Today
 
@@ -32,9 +62,9 @@ Users of the app can view activities day by day with details including the activ
 
 ---
 
-### 2. As a user, I can switch the selected day to a different day to view a list of all upcoming activities on that day
+### 5. As a user, I can switch the selected day to a different day to view a list of all upcoming activities on that day
 
-**Given**: A date is selected
+**Given**: The user has authenticated, and a date is selected
 
 **When**: The user clicks on a different date
 
@@ -42,9 +72,9 @@ Users of the app can view activities day by day with details including the activ
 
 ---
 
-### 3. As a user, I can see a list of activities I have signed up for on "My Activity List"
+### 6. As a user, I can see a list of activities I have signed up for on "My Activity List"
 
-**Given**: The application is loaded to the default page
+**Given**: The user has authenticated, and the application is loaded to the default page
 
 **When**: The user clicks "My Activity List"
 
@@ -52,27 +82,27 @@ Users of the app can view activities day by day with details including the activ
 
 ---
 
-**Given**: The user is looking at their activity list
-
-**When**: The user clicks on a specific activity
-
-**Then**: Details about that activity are displayed, including activity name, date, time, location, and brief description
-
----
-
-### 4. As a user, I can view details about a specific activity
+### 7. As a user, I can view details about a specific activity
 
 **Given**: A list of activities is shown for the selected day
 
 **When**: The user clicks on a specific activity
 
-**Then**: Details about that activity are displayed, including activity name, date, time, location, and brief description
+**Then**: Details about that activity are displayed, including activity name, date, time, location, and brief description, as well as a list of users that have already signed up for that activity.
 
 ---
 
-### 5. As a user, I can add an activity to My Activity List
+**Given**: The user has authenticated, and the user is looking at their activity list
 
-**Given**: A specific activity is currently being viewed that is not already part of the user's "My Activity List"
+**When**: The user clicks on a specific activity
+
+**Then**: Details about that activity are displayed, including activity name, date, time, location, and brief description, as well as a list of users that have already signed up for that activity.
+
+---
+
+### 8. As a user, I can add an activity to My Activity List
+
+**Given**: The user has authenticated, and a specific activity is currently being viewed that is not already part of the user's "My Activity List"
 
 **When**: The user clicks "Add to My Activities"
 
@@ -96,9 +126,9 @@ Users of the app can view activities day by day with details including the activ
 
 ---
 
-### 6. As a user, I can remove an activity from My Activity List
+### 9. As a user, I can remove an activity from My Activity List
 
-**Given**: A specific activity is currently being viewed that is already part of the user's "My Activity List"
+**Given**: The user has authenticated, and a specific activity is currently being viewed that is already part of the user's "My Activity List"
 
 **When**: The user clicks "Remove from My Activities"
 
@@ -114,7 +144,7 @@ Users of the app can view activities day by day with details including the activ
 
 ---
 
-### 7. As an admin, I can create new activities
+### 10. As an admin, I can create new activities
 
 **Given**: The admin page is open and the user has entered data in fields: name, date and time, location, and description
 
@@ -140,7 +170,7 @@ Users of the app can view activities day by day with details including the activ
 
 ---
 
-### 8. As an admin, I can modify existing activities
+### 11. As an admin, I can modify existing activities
 
 **Given**: The admin page is open
 
@@ -158,13 +188,31 @@ Users of the app can view activities day by day with details including the activ
 
 ---
 
-### 9. As an admin, I can delete activities
+### 12. As an admin, I can delete activities
 
 **Given**: The admin page is open
 
 **When**: The user clicks the delete button on an existing activity
 
 **Then**: The activity is deleted and a success confirmation is displayed with the message `<activity name> at <date and time> has been deleted.`
+
+---
+
+### 13. As an admin, I can create new users
+
+**Given**: The admin page is open and the user has entered data in fields: first name, last name
+
+**When**: The user clicks "Add User"
+
+**Then**: The user is created and a success confirmation is displayed with the message `User has been created with ID: <new user ID>` and the input fields are cleared
+
+---
+
+**Given**: The admin page is open and the user has entered data in fields: first name, last name with more than 50 characters in either field
+
+**When**: The user clicks "Add User"
+
+**Then**: An error message is returned indicating that the maximum length of first or last name is 50 characters.
 
 ## Class Diagram
 
@@ -321,4 +369,5 @@ We meet every Wednesday at 4:30 pm EST.
     <summary>Why is it not public?</summary>
 
     As this is a public repository, we do not want our standup link public. As per the assignment instructions: If your repo is public, and  you prefer not to put the Teams link there, no problem... just email it to me and your group members.  However, you should still list the date and time of your weekly meeting(s).
+
 </details>
