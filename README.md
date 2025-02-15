@@ -72,7 +72,7 @@ Users of the app can view activities day by day with details including the activ
 
 ---
 
-### 6. As a user, I can see a list of activities I have signed up for on "My Activity List" so that I know what I am supposed to be doing
+### 6. As a user, I can see a list of activities I have signed up for on "My Activity List" so that I can know what I am supposed to be doing
 
 **Given**: The user has authenticated, and the application is loaded to the default page
 
@@ -198,7 +198,7 @@ Users of the app can view activities day by day with details including the activ
 
 ---
 
-### 13. As an admin, I can create new users so that I can allow users able to log in
+### 13. As an admin, I can create new users so that I can allow users to be able to log in
 
 **Given**: The admin page is open and the user has entered data in fields: first name, last name
 
