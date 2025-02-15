@@ -14,7 +14,7 @@ Users of the app can view activities day by day with details including the activ
 
 ## Functional Requirements
 
-### 1. A user of the application can "log in" as a specific user ID
+### 1. As a user, I can "log in" as a specific user ID so that I can manage my activity list
 
 **Given**: The application is not open
 
@@ -24,7 +24,7 @@ Users of the app can view activities day by day with details including the activ
 
 ---
 
-### 2. The user of the application can act as a specific user
+### 2. As a user of the application, I can act as a specific user ID so that I can have a separate activity list from other users
 
 **Given**: The application is open to the default page
 
@@ -34,7 +34,7 @@ Users of the app can view activities day by day with details including the activ
 
 ---
 
-### 3. The user of the application can only act as a valid user ID
+### 3. As a user of the application, I can only act as a valid user ID so that I do not lose my data
 
 **Given**: The application is open to the default page
 
@@ -44,7 +44,7 @@ Users of the app can view activities day by day with details including the activ
 
 ---
 
-### 4. As a user, I can view a list of all upcoming activities today
+### 4. As a user, I can view a list of all upcoming activities today so that I can see what is happening
 
 **Given**: The user has authenticated
 
@@ -62,7 +62,7 @@ Users of the app can view activities day by day with details including the activ
 
 ---
 
-### 5. As a user, I can switch the selected day to a different day to view a list of all upcoming activities on that day
+### 5. As a user, I can switch the selected day to a different day so that I can view a list of all upcoming activities on that day
 
 **Given**: The user has authenticated, and a date is selected
 
@@ -72,7 +72,7 @@ Users of the app can view activities day by day with details including the activ
 
 ---
 
-### 6. As a user, I can see a list of activities I have signed up for on "My Activity List"
+### 6. As a user, I can see a list of activities I have signed up for on "My Activity List" so that I know what I am supposed to be doing
 
 **Given**: The user has authenticated, and the application is loaded to the default page
 
@@ -82,7 +82,7 @@ Users of the app can view activities day by day with details including the activ
 
 ---
 
-### 7. As a user, I can view details about a specific activity
+### 7. As a user, I can view details about a specific activity so that I can be informed about what I can sign up for
 
 **Given**: A list of activities is shown for the selected day
 
@@ -100,7 +100,7 @@ Users of the app can view activities day by day with details including the activ
 
 ---
 
-### 8. As a user, I can add an activity to My Activity List
+### 8. As a user, I can add an activity to My Activity List so that I can attend them
 
 **Given**: The user has authenticated, and a specific activity is currently being viewed that is not already part of the user's "My Activity List"
 
@@ -126,7 +126,7 @@ Users of the app can view activities day by day with details including the activ
 
 ---
 
-### 9. As a user, I can remove an activity from My Activity List
+### 9. As a user, I can remove an activity from My Activity List so that I can withdraw my interest in an activity I had previously signed up for
 
 **Given**: The user has authenticated, and a specific activity is currently being viewed that is already part of the user's "My Activity List"
 
@@ -144,7 +144,7 @@ Users of the app can view activities day by day with details including the activ
 
 ---
 
-### 10. As an admin, I can create new activities
+### 10. As an admin, I can create new activities so that I can make them available to users
 
 **Given**: The admin page is open and the user has entered data in fields: name, date and time, location, and description
 
@@ -170,7 +170,7 @@ Users of the app can view activities day by day with details including the activ
 
 ---
 
-### 11. As an admin, I can modify existing activities
+### 11. As an admin, I can modify existing activities so that I can make corrections
 
 **Given**: The admin page is open
 
@@ -188,7 +188,7 @@ Users of the app can view activities day by day with details including the activ
 
 ---
 
-### 12. As an admin, I can delete activities
+### 12. As an admin, I can delete activities so that I can cancel activities
 
 **Given**: The admin page is open
 
@@ -198,7 +198,7 @@ Users of the app can view activities day by day with details including the activ
 
 ---
 
-### 13. As an admin, I can create new users
+### 13. As an admin, I can create new users so that I can allow users able to log in
 
 **Given**: The admin page is open and the user has entered data in fields: first name, last name
 
