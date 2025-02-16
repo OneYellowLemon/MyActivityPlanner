@@ -10,7 +10,7 @@ Users of the app can view activities day by day with details including the activ
 
 ## Storyboard
 
-<!-- Screen mockups of application. -->
+[Storyboard](storyboard.pdf)
 
 ## Functional Requirements
 
