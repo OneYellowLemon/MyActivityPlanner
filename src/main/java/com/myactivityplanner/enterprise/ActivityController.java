@@ -27,7 +27,7 @@ public class ActivityController {
          * @param date of the activity/ies
          * @return a list of activities occurring on the given date
          */
-        return int LocalDate;
+        return LocalDate;
     }
     
     @GetMapping
@@ -37,7 +37,7 @@ public class ActivityController {
      * @param activityID
      * @return a list of users(userID) for the specified activity (array?)
      */
-    return int userID;
+    return userID;
     }
     
     @GetMapping
