@@ -4,6 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.DeleteMapping;
+import java.time.LocalDate;
 
 @Controller
 public class ActivityController {
@@ -18,7 +19,7 @@ public class ActivityController {
     }
 
     @GetMapping
-    public Date getActivitiesByDate() {
+    public LocalDate getActivitiesByDate() {
         /**
          * Retrieves a list of activities on a specific date
          * Or a length of dates?
