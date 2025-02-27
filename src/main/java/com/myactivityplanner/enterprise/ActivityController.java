@@ -18,7 +18,7 @@ public class ActivityController {
     }
 
     @GetMapping
-    public Date getActivitiesByDate {
+    public Date getActivitiesByDate() {
         /**
          * Retrieves a list of activities on a specific date
          * Or a length of dates?
@@ -29,7 +29,7 @@ public class ActivityController {
     }
     
     @GetMapping
-    public int getUsersByActivity {
+    public int getUsersByActivity() {
     /**
      * Retrieves a list of users that have signed up for a given activity
      * @param activityID
@@ -38,7 +38,7 @@ public class ActivityController {
     }
     
     @GetMapping
-    public int signUpForActivity {
+    public int signUpForActivity() {
         /**
          * @param activityID
          * @param userID
@@ -47,7 +47,7 @@ public class ActivityController {
     }
 
     @GetMapping
-    public boolean isUserSignedUpForActivity {
+    public boolean isUserSignedUpForActivity() {
         /**
          * @param activityID
          * @param userID
@@ -56,7 +56,7 @@ public class ActivityController {
     }
 
     @DeleteMapping
-    public boolean withdrawFromActivity {
+    public boolean withdrawFromActivity() {
         /**
          * Allows user to withdraw from an activity
          * @param activityID
