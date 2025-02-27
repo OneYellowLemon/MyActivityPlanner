@@ -27,6 +27,7 @@ public class ActivityController {
          * @param date of the activity/ies
          * @return a list of activities occurring on the given date
          */
+        return int LocalDate;
     }
     
     @GetMapping
@@ -36,15 +37,17 @@ public class ActivityController {
      * @param activityID
      * @return a list of users(userID) for the specified activity (array?)
      */
+    return int userID;
     }
     
     @GetMapping
-    public int signUpForActivity() {
+    public boolean signUpForActivity() {
         /**
          * @param activityID
          * @param userID
          * @return boolean is True for user being signed up for activity
          */
+        return true;
     }
 
     @GetMapping
@@ -54,6 +57,7 @@ public class ActivityController {
          * @param userID
          * @return boolean confirming a user is registered for an activity
          */
+        return true;
     }
 
     @DeleteMapping
@@ -64,5 +68,6 @@ public class ActivityController {
          * @param userID
          * @return removal of user from activity list of specified activity
          */
+        return false;
     }
 }
