@@ -15,11 +15,7 @@ public class ActivityController {
     public String index() {
         return "index";
     }
-    @RequestMapping
-public interface ActivityController {
-/**
- * Not sure what to put here. Or if anything should be put in here at all
- */
+
     @GetMapping
     public interface getActivitiesByDate {
         /**
@@ -67,5 +63,4 @@ public interface ActivityController {
          * @return removal of user from activity list of specified activity
          */
     }
-}
 }
