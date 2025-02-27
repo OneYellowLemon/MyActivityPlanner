@@ -3,6 +3,7 @@ package com.myactivityplanner.enterprise;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.DeleteMapping;
 
 @Controller
 public class ActivityController {
@@ -17,7 +18,7 @@ public class ActivityController {
     }
 
     @GetMapping
-    public interface getActivitiesByDate {
+    public Date getActivitiesByDate {
         /**
          * Retrieves a list of activities on a specific date
          * Or a length of dates?
@@ -28,7 +29,7 @@ public class ActivityController {
     }
     
     @GetMapping
-    public interface getUsersByActivity {
+    public int getUsersByActivity {
     /**
      * Retrieves a list of users that have signed up for a given activity
      * @param activityID
@@ -37,7 +38,7 @@ public class ActivityController {
     }
     
     @GetMapping
-    public interface signUpForActivity {
+    public int signUpForActivity {
         /**
          * @param activityID
          * @param userID
@@ -46,7 +47,7 @@ public class ActivityController {
     }
 
     @GetMapping
-    public interface isUserSignedUpForActivity {
+    public boolean isUserSignedUpForActivity {
         /**
          * @param activityID
          * @param userID
@@ -55,7 +56,7 @@ public class ActivityController {
     }
 
     @DeleteMapping
-    public interface withdrawFromActivity {
+    public boolean withdrawFromActivity {
         /**
          * Allows user to withdraw from an activity
          * @param activityID
