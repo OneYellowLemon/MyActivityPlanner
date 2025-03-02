@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import java.time.LocalDate;
 
+
 @Controller
 public class ActivityController {
 
@@ -17,8 +18,8 @@ public class ActivityController {
     public String index() {
         return "index";
     }
-
-    @GetMapping
+/**
+ *     @GetMapping
     public LocalDate getActivitiesByDate() {
         /**
          * Retrieves a list of activities on a specific date
@@ -26,8 +27,8 @@ public class ActivityController {
          * Will request for date and
          * @param date of the activity/ies
          * @return a list of activities occurring on the given date
-         */
-        return int LocalDate;
+         *
+       * return int LocalDate;
     }
     
     @GetMapping
@@ -36,7 +37,7 @@ public class ActivityController {
      * Retrieves a list of users that have signed up for a given activity
      * @param activityID
      * @return a list of users(userID) for the specified activity (array?)
-     */
+     *
     return int userID;
     }
     
@@ -46,7 +47,7 @@ public class ActivityController {
          * @param activityID
          * @param userID
          * @return boolean is True for user being signed up for activity
-         */
+         *
         return true;
     }
 
@@ -56,7 +57,7 @@ public class ActivityController {
          * @param activityID
          * @param userID
          * @return boolean confirming a user is registered for an activity
-         */
+         *
         return true;
     }
 
@@ -67,7 +68,7 @@ public class ActivityController {
          * @param activityID
          * @param userID
          * @return removal of user from activity list of specified activity
-         */
+         *
         return false;
     }
 }
