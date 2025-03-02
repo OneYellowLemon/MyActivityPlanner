@@ -48,7 +48,7 @@ public class ActivityController {
          * @param userID
          * @return boolean is True for user being signed up for activity
          *
-        return true;
+        *return true;
     }
 
     @GetMapping
@@ -71,4 +71,5 @@ public class ActivityController {
          *
         return false;
     }
+    */
 }
