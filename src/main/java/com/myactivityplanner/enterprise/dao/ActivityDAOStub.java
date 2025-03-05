@@ -26,7 +26,7 @@ public class ActivityDAOStub implements IActivityDAO {
 
     @Override
     public boolean saveActivity(Activity activity) {
-        activities.put(activity.activityId, activity);
+        activities.put(activity.getActivityId(), activity);
         return true;
     }
 
