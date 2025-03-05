@@ -15,10 +15,10 @@ public class UserDAOStub implements IUserDAO {
     @Override
     public boolean createUser(String firstName, String lastName) {
         User user = new User();
-        user.userId = users.size() + 1;
-        user.firstName = firstName;
-        user.lastName = lastName;
-        users.put(user.userId, user);
+        user.setUserId(users.size() + 1);
+        user.setFirstName(firstName);
+        user.setLastName(lastName);
+        users.put(user.getUserId(), user);
         return true;
     }
 
