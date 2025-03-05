@@ -4,7 +4,7 @@ import lombok.Data;
 
 @Data
 public class User {
-    public int userId;
-    public String firstName;
-    public String lastName;
+    private int userId;
+    private String firstName;
+    private String lastName;
 }

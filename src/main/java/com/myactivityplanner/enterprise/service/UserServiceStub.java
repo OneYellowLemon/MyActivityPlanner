@@ -14,6 +14,6 @@ public class UserServiceStub implements IUserService {
 
     @Override
     public String getUserName(int userId) {
-        return "";
+        return "TestUser Name";
     }
 }
