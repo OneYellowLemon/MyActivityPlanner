@@ -1,10 +1,8 @@
 package com.myactivityplanner.enterprise.service;
 
-import org.springframework.context.annotation.Profile;
-import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
 
-@Repository
-@Profile("test")
+@Service
 public class UserServiceStub implements IUserService {
 
     @Override
