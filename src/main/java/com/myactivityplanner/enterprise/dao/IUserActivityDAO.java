@@ -1,5 +1,10 @@
 package com.myactivityplanner.enterprise.dao;
 
+import com.myactivityplanner.enterprise.dto.Activity;
+import com.myactivityplanner.enterprise.dto.User;
+
+import java.util.List;
+
 public interface IUserActivityDAO {
     /**
      * Check if a user is signed up for a specified activity
@@ -8,6 +13,20 @@ public interface IUserActivityDAO {
      * @return True if the user is signed up for the activity, otherwise false
      */
     boolean isUserSignedUpForActivity(int userId, int activityId);
+
+    /**
+     * Get a list of users signed up for a specified activity
+     * @param activityId The ID of the activity to get users for
+     * @return A list of users signed up for the activity
+     */
+    List<User> getUsersSignedUpForActivity(int activityId);
+
+    /**
+     * Get a list of activities a specified user is signed up for
+     * @param userId The ID of the user to get activities for
+     * @return A list of activities the user is signed up for
+     */
+    List<Activity> getActivitiesUserIsSignedUpFor(int userId);
 
     /**
      * Sign up a user for an activity
