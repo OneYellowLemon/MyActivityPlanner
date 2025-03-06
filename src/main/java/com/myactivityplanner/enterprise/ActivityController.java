@@ -1,10 +1,15 @@
 package com.myactivityplanner.enterprise;
 
 import com.myactivityplanner.enterprise.dto.Activity;
+import com.myactivityplanner.enterprise.dto.User;
 import com.myactivityplanner.enterprise.service.IActivityService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Date;
 
 @Controller
 public class ActivityController {
@@ -60,7 +65,33 @@ public class ActivityController {
      */
     @GetMapping("api/activity/signedup/{activityId}/{userId}")
     @ResponseBody
-    public boolean isUserSignedUpForActivity(@PathVariable int activityId, @PathVariable int userId) {
+    public boolean isUserSignedUpForActivity(@PathVariable int userId, @PathVariable int activityId) {
         return activityService.isUserSignedUpForActivity(userId, activityId);
+    }
+    
+    @GetMapping("api/activity/getSignedUpActivities/{activityId}")
+    public List<User> getSignedUpActivitiesForUser(@PathVariable int activityId) {
+        return activityService.getSignedUpActivitiesForUser(activityId);
+    }
+
+    @GetMapping("api/activity/activitiesForDate/{timestamp}")
+    public List<Activity> getActivitiesForDate(@PathVariable Date date) {
+        return activityService.getActivitiesForDate(date);
+    }
+
+    @GetMapping("api/activity/activitiesUserSignedUpFor/{userId}")
+    public List<Activity> getActivitiesUserIsSignedUpFor(@PathVariable int userId) {
+        return activityService.getActivitiesUserIsSignedUpFor(userId);
+    }
+
+    @GetMapping("api/activity/getSignedUpActivitiesForUser/{activityId}/{userId}")
+    @ResponseBody
+    public boolean getSignedUpActivitiesForUser(@PathVariable int activityId, @PathVariable int userId) {
+        return activityService.getSignedUpActivitiesForUser(activityId, userId);
+    }
+
+    @DeleteMapping("api/activity/withdrawFromActivity/{activityId}/{userId}")
+    public boolean withdrawFromActivity(@PathVariable int activityId, @PathVariable int userId) {
+        return activityService.withdrawFromActivity(activityId, userId);
     }
 }
