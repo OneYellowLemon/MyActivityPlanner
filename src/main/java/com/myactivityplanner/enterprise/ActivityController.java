@@ -64,20 +64,17 @@ public class ActivityController {
         return activityService.isUserSignedUpForActivity(userId, activityId);
     }
     
-    @GetMapping("api/activity/getUsersSignedUp/{activityId}")
-    @ResponseBody
+    @GetMapping("api/activity/getUsersSignedUp/{activityId}")]
     public List<User> getUsersSignedUpForActivity(@PathVariable int activityId) {
         return activityService.getUsersSignedUpForActivity(activityId);
     }
 
     @GetMapping("api/activity/activitiesForDate/{timestamp}")
-    @ResponseBody
     public List<Activity> getActivitiesForDate(@PathVariable Date timestamp) {
         return activityService.getActivitiesForDate(timestamp);
     }
 
     @GetMapping("api/activity/activitiesUserSignedUpFor/{userId}")
-    @ResponseBody
     public List<Activity> getActivitiesUserIsSignedUpFor(@PathVariable int userId) {
         return activityService.getActivitiesUserIsSignedUpFor(userId);
     }
