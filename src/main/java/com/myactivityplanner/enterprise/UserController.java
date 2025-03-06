@@ -12,11 +12,6 @@ public class UserController {
     
     @Autowired
     IUserService userService;
-    
-    @RequestMapping
-    public String index() {
-        return "index";
-    }
 
     @PutMapping("api/user")
     public boolean createUser(@PathVariable String firstName, @PathVariable String lastName) {
