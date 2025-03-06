@@ -18,9 +18,6 @@ public class ActivityController {
     @Autowired
     IActivityService activityService;
 
-    @Autowired
-    IUserActivityService userActivityService;
-
     /**
      * Handle the root (/) endpoint and return a start page
      * @return index.html UI page
@@ -69,33 +66,33 @@ public class ActivityController {
      */
     @GetMapping("api/activity/signedup/{activityId}/{userId}")
     @ResponseBody
-    public boolean isUserSignedUpForActivity(@PathVariable int activityId, @PathVariable int userId) {
-        return userActivityService.isUserSignedUpForActivity(userId, activityId);
+    public boolean isUserSignedUpForActivity(@PathVariable int userId, @PathVariable int activityId) {
+        return activityService.isUserSignedUpForActivity(userId, activityId);
     }
     
-    @GetMapping("api/activity/getUsersSignedUp/{activityId}")
-    public List<User> getUsersSignedUpForActivity(@PathVariable int activityId) {
-        return userActivityService.getUsersSignedUpForActivity(activityId);
+    @GetMapping("api/activity/getSignedUpActivities/{activityId}")
+    public List<User> getSignedUpActivitiesForUser(@PathVariable int activityId) {
+        return activityService.getSignedUpActivitiesForUser(activityId);
     }
 
     @GetMapping("api/activity/activitiesForDate/{timestamp}")
-    public List<Activity> getActivitiesForDate(@PathVariable Date timestamp) {
-        return userActivityService.getActivitiesForDate(timestamp);
+    public List<Activity> getActivitiesForDate(@PathVariable Date date) {
+        return activityService.getActivitiesForDate(date);
     }
 
     @GetMapping("api/activity/activitiesUserSignedUpFor/{userId}")
     public List<Activity> getActivitiesUserIsSignedUpFor(@PathVariable int userId) {
-        return userActivityService.getActivitiesUserIsSignedUpFor(userId);
+        return activityService.getActivitiesUserIsSignedUpFor(userId);
     }
 
-    @GetMapping("api/activity/signUpUser/{activityId}/{userId}")
+    @GetMapping("api/activity/signUpForActivity/{activityId}/{userId}")
     @ResponseBody
-    public boolean signUpUser(@PathVariable int activityId, @PathVariable int userId) {
-        return userActivityService.signUpUser(activityId, userId);
+    public boolean signUpForActivity(@PathVariable int activityId, @PathVariable int userId) {
+        return activityService.signUpUser(activityId, userId);
     }
 
-    @DeleteMapping("api/activity/withdrawUser/{activityId}/{userId}")
-    public boolean withdrawUser(@PathVariable int activityId, @PathVariable int userId) {
-        return userActivityService.withdrawUser(activityId, userId);
+    @DeleteMapping("api/activity/withdrawFromActivity/{activityId}/{userId}")
+    public boolean withdrawFromActivity(@PathVariable int activityId, @PathVariable int userId) {
+        return activityService.withdrawUser(activityId, userId);
     }
 }
