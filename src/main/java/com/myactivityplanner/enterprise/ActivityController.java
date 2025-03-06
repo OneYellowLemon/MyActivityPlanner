@@ -79,17 +79,6 @@ public class ActivityController {
         return activityService.getActivitiesForDate(date);
     }
 
-    @GetMapping("api/activity/activitiesUserSignedUpFor/{userId}")
-    public List<Activity> getActivitiesUserIsSignedUpFor(@PathVariable int userId) {
-        return activityService.getActivitiesUserIsSignedUpFor(userId);
-    }
-
-    @GetMapping("api/activity/getSignedUpActivitiesForUser/{activityId}/{userId}")
-    @ResponseBody
-    public boolean getSignedUpActivitiesForUser(@PathVariable int activityId, @PathVariable int userId) {
-        return activityService.getSignedUpActivitiesForUser(activityId, userId);
-    }
-
     @DeleteMapping("api/activity/withdrawFromActivity/{activityId}/{userId}")
     public boolean withdrawFromActivity(@PathVariable int activityId, @PathVariable int userId) {
         return activityService.withdrawFromActivity(activityId, userId);
