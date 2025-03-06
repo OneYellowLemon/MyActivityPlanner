@@ -84,10 +84,10 @@ public class ActivityController {
         return activityService.getActivitiesUserIsSignedUpFor(userId);
     }
 
-    @GetMapping("api/activity/signUpForActivity/{activityId}/{userId}")
+    @GetMapping("api/activity/getSignedUpActivitiesForUser/{activityId}/{userId}")
     @ResponseBody
-    public boolean signUpForActivity(@PathVariable int activityId, @PathVariable int userId) {
-        return activityService.signUpForActivity(activityId, userId);
+    public boolean getSignedUpActivitiesForUser(@PathVariable int activityId, @PathVariable int userId) {
+        return activityService.getSignedUpActivitiesForUser(activityId, userId);
     }
 
     @DeleteMapping("api/activity/withdrawFromActivity/{activityId}/{userId}")
