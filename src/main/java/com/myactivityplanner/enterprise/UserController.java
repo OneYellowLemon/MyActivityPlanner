@@ -20,7 +20,7 @@ public class UserController {
 
     @GetMapping("api/user/{firstName}/{lastName}")
     public boolean createUser(@PathVariable String firstName, @PathVariable String lastName) {
-        return userService.createUser(firstname, lastName);
+        return userService.createUser(firstName, lastName);
     }
 
     @GetMapping("api/user/{userId}")
