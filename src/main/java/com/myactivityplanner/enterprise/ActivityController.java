@@ -63,4 +63,9 @@ public class ActivityController {
     public boolean isUserSignedUpForActivity(@PathVariable int activityId, @PathVariable int userId) {
         return activityService.isUserSignedUpForActivity(userId, activityId);
     }
+    
+    @GetMapping("api/activity/getUsersSignedUp/{activityId}")
+    public boolean getUsersSignedUpForActivity(@PathVariable int activityId) {
+        return activityService.getUsersSignedUpForActivity(activityId);
+    }
 }
