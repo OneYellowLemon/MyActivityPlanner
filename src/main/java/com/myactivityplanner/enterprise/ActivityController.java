@@ -70,8 +70,8 @@ public class ActivityController {
     }
     
     @GetMapping("api/activity/getSignedUpActivities/{activityId}")
-    public List<User> getSignedUpActivitiesForUser(@PathVariable int activityId) {
-        return activityService.getSignedUpActivitiesForUser(activityId);
+    public List<Activity> getSignedUpActivitiesForUser(@PathVariable int userId) {
+        return activityService.getSignedUpActivitiesForUser(userId);
     }
 
     @GetMapping("api/activity/activitiesForDate/{timestamp}")
