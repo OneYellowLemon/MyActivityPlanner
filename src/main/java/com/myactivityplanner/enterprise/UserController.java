@@ -18,7 +18,7 @@ public class UserController {
         return "index";
     }
 
-    @GetMapping("api/user/{firstName}/{lastName}")
+    @GetMapping("api/user")
     public boolean createUser(@PathVariable String firstName, @PathVariable String lastName) {
         return userService.createUser(firstName, lastName);
     }
