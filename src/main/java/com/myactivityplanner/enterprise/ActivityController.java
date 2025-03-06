@@ -3,7 +3,6 @@ package com.myactivityplanner.enterprise;
 import com.myactivityplanner.enterprise.dto.Activity;
 import com.myactivityplanner.enterprise.dto.User;
 import com.myactivityplanner.enterprise.service.IActivityService;
-import com.myactivityplanner.enterprise.service.IUserActivityService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
