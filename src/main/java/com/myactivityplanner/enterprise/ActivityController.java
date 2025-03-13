@@ -10,8 +10,13 @@ public class ActivityController {
      * Handle the root (/) endpoint and return a start page
      * @return index.html
      */
-    @RequestMapping
+    @RequestMapping("/")
     public String index() {
         return "index";
+    }
+
+    @RequestMapping("activities")
+    public String activities() {
+        return "AvailableActivities";
     }
 }
