@@ -15,8 +15,23 @@ public class ActivityController {
         return "index";
     }
 
-    @RequestMapping("activities")
-    public String activities() {
+    @RequestMapping("AvailableActivities")
+    public String AvailableActivities() {
         return "AvailableActivities";
+    }
+
+    @RequestMapping("PersonalActivities")
+    public String PersonalActivities() {
+        return "PersonalActivities";
+    }
+
+    @RequestMapping("AddOrRemoveActivity")
+    public String AddOrRemoveActivity() {
+        return "AddOrRemoveActivity";
+    }
+
+    @RequestMapping("AdminAccount")
+    public String AdminAccount() {
+        return "AdminAccount";
     }
 }
