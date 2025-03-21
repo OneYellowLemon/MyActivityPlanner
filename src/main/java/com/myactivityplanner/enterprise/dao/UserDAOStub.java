@@ -13,13 +13,13 @@ public class UserDAOStub implements IUserDAO {
     Map<Integer, User> users = new HashMap<>();
 
     @Override
-    public boolean createUser(String firstName, String lastName) {
+    public User createUser(String firstName, String lastName) {
         User user = new User();
         user.setUserId(users.size() + 1);
         user.setFirstName(firstName);
         user.setLastName(lastName);
         users.put(user.getUserId(), user);
-        return true;
+        return user;
     }
 
     @Override
