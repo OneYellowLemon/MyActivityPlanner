@@ -6,25 +6,37 @@ import org.springframework.stereotype.Service;
 
 import java.util.Date;
 import java.util.List;
+import java.util.ArrayList; // Import ArrayList
 
 @Service
 public class ActivityServiceStub implements IActivityService {
+    // Maybe use these constants for testing this might make it easier then repeating hard coded values
+    // contstant for the activity
+    private static final int DEFAULT_ACTIVITY_ID = 1;
+    private static final String DEFAULT_ACTIVITY_NAME = "Test Activity";
+    private static final String DEFAULT_ACTIVITY_DESCRIPTION = "This is a test activity";
+    private static final String DEFAULT_ACTIVITY_LOCATION = "Test Location";
+
+    // constants for the user
+    private static final String DEFAULT_USER_FIRST_NAME = "Test First Name";
+    private static final String DEFAULT_USER_LAST_NAME = "Test Last Name";
+
 
     @Override
     public List<User> getUsersSignedUpForActivity(int activityId) {
         User testUser = new User();
-        testUser.setFirstName("Test First Name");
-        testUser.setLastName("Test Last Name");
-        return List.of(testUser);
+        testUser.setFirstName(DEFAULT_USER_FIRST_NAME);
+        testUser.setLastName(DEFAULT_USER_LAST_NAME);
+        return List.of(testUser); // More concise way to create a single-element list
     }
 
     @Override
     public List<Activity> getActivitiesForDate(Date date) {
         Activity activity = new Activity();
-        activity.setActivityId(1);
-        activity.setName("Test Activity");
-        activity.setDescription("This is a test activity");
-        activity.setLocation("Test Location");
+        activity.setActivityId(DEFAULT_ACTIVITY_ID);
+        activity.setName(DEFAULT_ACTIVITY_NAME);
+        activity.setDescription(DEFAULT_ACTIVITY_DESCRIPTION);
+        activity.setLocation(DEFAULT_ACTIVITY_LOCATION);
         activity.setTimestamp(date);
         return List.of(activity);
     }
@@ -32,10 +44,10 @@ public class ActivityServiceStub implements IActivityService {
     @Override
     public List<Activity> getSignedUpActivitiesForUser(int userId) {
         Activity activity = new Activity();
-        activity.setActivityId(1);
-        activity.setName("Test Activity");
-        activity.setDescription("This is a test activity");
-        activity.setLocation("Test Location");
+        activity.setActivityId(DEFAULT_ACTIVITY_ID);
+        activity.setName(DEFAULT_ACTIVITY_NAME);
+        activity.setDescription(DEFAULT_ACTIVITY_DESCRIPTION);
+        activity.setLocation(DEFAULT_ACTIVITY_LOCATION);
         activity.setTimestamp(new Date());
         return List.of(activity);
     }
@@ -58,10 +70,10 @@ public class ActivityServiceStub implements IActivityService {
     @Override
     public Activity getActivity(int activityId) {
         Activity activity = new Activity();
-        activity.setActivityId(activityId);
-        activity.setName("Test Activity");
-        activity.setDescription("This is a test activity");
-        activity.setLocation("Test Location");
+        activity.setActivityId(activityId); // Keep activityId, as it's a parameter
+        activity.setName(DEFAULT_ACTIVITY_NAME);
+        activity.setDescription(DEFAULT_ACTIVITY_DESCRIPTION);
+        activity.setLocation(DEFAULT_ACTIVITY_LOCATION);
         activity.setTimestamp(new Date());
         return activity;
     }
