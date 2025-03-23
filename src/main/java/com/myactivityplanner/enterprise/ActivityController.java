@@ -66,8 +66,8 @@ public class ActivityController {
      */
     @GetMapping("api/activity/signedup/{activityId}/{userId}")
     @ResponseBody
-    public boolean isUserSignedUpForActivity(@PathVariable int userId, @PathVariable int activityId) {
-        return activityService.isUserSignedUpForActivity(userId, activityId);
+    public boolean isUserSignedUp(@PathVariable int userId, @PathVariable int activityId) {
+        return activityService.isUserSignedUp(userId, activityId);
     }
 
     /**
@@ -100,7 +100,7 @@ public class ActivityController {
     @PostMapping("api/activity/activitiesForDate")
     @ResponseBody
     public List<Activity> getActivitiesForDate(@RequestBody Date date) {
-        return activityService.getActivitiesForDate(date);
+        return activityService.getActivitiesDate(date);
     }
 
     /**
