@@ -22,6 +22,8 @@ public class ActivityController {
      There are ways to do custom responses but really if you can use the standard response codes overall ie 200s, 300s, 400s etc that will be good. Especially when it comes to things like auth and such just returning ture/false might not be sufficient you are going to want 400s
 
      I put in an example please see line 56-69 as they should be not too bad to implement
+
+     There is also another option that I found but it is a little more involved at first and that is create a a global exception handler - I would not really do this I would do that one that I gave already but I created an example file for this and then you will need to change method signatures to allow for the return to be of not boolean (that is why I woudl not do this but it aligns more with the framework)
     */
     @Autowired
     IActivityService activityService;
