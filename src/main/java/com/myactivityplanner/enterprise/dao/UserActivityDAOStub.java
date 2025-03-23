@@ -12,7 +12,7 @@ import java.util.List;
 @Profile("test")
 public class UserActivityDAOStub implements IUserActivityDAO {
     @Override
-    public boolean isUserSignedUpForActivity(int userId, int activityId) {
+    public boolean isUserSignedUp(int userId, int activityId) {
         return true;
     }
 

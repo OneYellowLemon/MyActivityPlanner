@@ -8,7 +8,7 @@ import java.util.Date;
 import java.util.List;
 
 @Service
-public class ActivityServiceStub implements IActivityService {
+public class ActivityServiceStub implements IActivityService{
 
     @Override
     public List<User> getUsersSignedUpForActivity(int activityId) {

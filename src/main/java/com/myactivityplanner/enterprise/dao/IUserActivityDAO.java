@@ -12,7 +12,7 @@ public interface IUserActivityDAO {
      * @param activityId The ID of the activity to check
      * @return True if the user is signed up for the activity, otherwise false
      */
-    boolean isUserSignedUpForActivity(int userId, int activityId);
+    boolean isUserSignedUp(int userId, int activityId);
 
     /**
      * Get a list of users signed up for a specified activity

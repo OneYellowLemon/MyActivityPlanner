@@ -1,7 +1,5 @@
 package com.myactivityplanner.enterprise.dao;
 
-import com.myactivityplanner.enterprise.dto.User;
-
 public interface IUserDAO {
     /**
      * Create a new user
@@ -11,10 +9,4 @@ public interface IUserDAO {
      */
     boolean createUser(String firstName, String lastName);
 
-    /**
-     * Get a user by ID
-     * @param userId The ID of the user to get
-     * @return The user with the specified ID
-     */
-    User getUser(int userId);
 }
