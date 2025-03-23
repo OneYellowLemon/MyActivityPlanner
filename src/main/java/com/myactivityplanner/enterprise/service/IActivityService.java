@@ -19,7 +19,7 @@ public interface IActivityService {
      * @param date The date to get activities for
      * @return A list of activities for the specified date
      */
-    List<Activity> getActivitiesForDate(Date date);
+    List<Activity> getActivitiesDate(Date date);
 
     /**
      * Get a list of activities a user is signed up for
@@ -34,7 +34,7 @@ public interface IActivityService {
      * @param activityId The ID of the activity to check
      * @return True if the user is signed up for the activity, otherwise false
      */
-    boolean isUserSignedUpForActivity(int userId, int activityId);
+    boolean isUserSignedUp(int userId, int activityId);
 
     /**
      * Sign up a user for an activity

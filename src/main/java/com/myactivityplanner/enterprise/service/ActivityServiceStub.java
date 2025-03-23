@@ -8,7 +8,7 @@ import java.util.Date;
 import java.util.List;
 
 @Service
-public class ActivityServiceStub implements IActivityService {
+public class ActivityServiceStub implements IActivityService{
 
     @Override
     public List<User> getUsersSignedUpForActivity(int activityId) {
@@ -19,7 +19,7 @@ public class ActivityServiceStub implements IActivityService {
     }
 
     @Override
-    public List<Activity> getActivitiesForDate(Date date) {
+    public List<Activity> getActivitiesDate(Date date) {
         Activity activity = new Activity();
         activity.setActivityId(1);
         activity.setName("Test Activity");
@@ -41,7 +41,7 @@ public class ActivityServiceStub implements IActivityService {
     }
 
     @Override
-    public boolean isUserSignedUpForActivity(int userId, int activityId) {
+    public boolean isUserSignedUp(int userId, int activityId) {
         return true;
     }
 

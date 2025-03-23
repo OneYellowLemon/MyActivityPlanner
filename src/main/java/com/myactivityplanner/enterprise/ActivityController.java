@@ -7,8 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
 import java.util.Date;
+import java.util.List;
 
 @Controller
 public class ActivityController {
@@ -66,8 +66,8 @@ public class ActivityController {
      */
     @GetMapping("api/activity/signedup/{activityId}/{userId}")
     @ResponseBody
-    public boolean isUserSignedUpForActivity(@PathVariable int userId, @PathVariable int activityId) {
-        return activityService.isUserSignedUpForActivity(userId, activityId);
+    public boolean isUserSignedUp(@PathVariable int userId, @PathVariable int activityId) {
+        return activityService.isUserSignedUp(userId, activityId);
     }
 
     /**
@@ -86,7 +86,7 @@ public class ActivityController {
      * @param userId The ID of the user to get activities for
      * @return A list of activities the user is signed up for
      */
-    @GetMapping("api/activity/signedupfor/{userId}")
+    @GetMapping("api/activity/signedness/{userId}")
     @ResponseBody
     public List<Activity> getSignedUpActivitiesForUser(@PathVariable int userId) {
         return activityService.getSignedUpActivitiesForUser(userId);
@@ -100,7 +100,7 @@ public class ActivityController {
     @PostMapping("api/activity/activitiesForDate")
     @ResponseBody
     public List<Activity> getActivitiesForDate(@RequestBody Date date) {
-        return activityService.getActivitiesForDate(date);
+        return activityService.getActivitiesDate(date);
     }
 
     /**
