@@ -4,6 +4,8 @@ import com.myactivityplanner.enterprise.dto.Activity;
 import com.myactivityplanner.enterprise.dto.User;
 import com.myactivityplanner.enterprise.service.IActivityService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
@@ -13,6 +15,14 @@ import java.util.Date;
 @Controller
 public class ActivityController {
 
+    /* The one thing here is that you are returning true false for these for a success or failure and that is most likely going to cause you issues later on.
+
+     I would recommend that you do some sort of response code instead as that will help you and the frontend.
+
+     There are ways to do custom responses but really if you can use the standard response codes overall ie 200s, 300s, 400s etc that will be good. Especially when it comes to things like auth and such just returning ture/false might not be sufficient you are going to want 400s
+
+     I put in an example please see line 56-69 as they should be not too bad to implement
+    */
     @Autowired
     IActivityService activityService;
 
@@ -43,8 +53,20 @@ public class ActivityController {
      */
     @PutMapping("api/activity")
     @ResponseBody
-    public boolean saveActivity(@RequestBody Activity activity) {
-        return activityService.saveActivity(activity);
+    public ResponseEntity<Activity> saveActivity(@RequestBody Activity activity) {
+        try {
+
+            boolean saved = activityService.saveActivity(activity);
+
+            if (saved) {
+                return new ResponseEntity<>(activity, HttpStatus.OK);
+            } else {
+                return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+            }
+        } catch (Exception e) {
+
+            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+        }
     }
 
     /**
