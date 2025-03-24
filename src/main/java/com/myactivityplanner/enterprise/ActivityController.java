@@ -19,7 +19,7 @@ public class ActivityController {
     IActivityService activityService;
 
     /**
-     * Handle the root (/) endpoint and return a start page
+     * Handle the root (/) endpoint and return starting page
      * @return index.html
      */
     @RequestMapping("/")
@@ -27,21 +27,37 @@ public class ActivityController {
         return "index";
     }
 
+    /**
+     * Handle the AvailableActivities endpoint and return the AvailableActivities page
+     * @return AvailableActivities.html
+     */
     @RequestMapping("AvailableActivities")
     public String AvailableActivities() {
         return "AvailableActivities";
     }
 
+    /**
+     * Handle the PersonalActivities endpoint and return the PersonalActivities page
+     * @return PersonalActivities.html
+     */
     @RequestMapping("PersonalActivities")
     public String PersonalActivities() {
         return "PersonalActivities";
     }
 
+    /**
+     * Handle the AddOrRemoveActivity endpoint and return the AddOrRemoveActivity page
+     * @return AddOrRemoveActivity.html
+     */
     @RequestMapping("AddOrRemoveActivity")
     public String AddOrRemoveActivity() {
         return "AddOrRemoveActivity";
     }
 
+    /**
+     * Handle the AdminAccount endpoint and return the AdminAccount page
+     * @return AdminAccount.html
+     */
     @RequestMapping("AdminAccount")
     public String AdminAccount() {
         return "AdminAccount";
