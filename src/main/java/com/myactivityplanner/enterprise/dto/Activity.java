@@ -2,13 +2,13 @@ package com.myactivityplanner.enterprise.dto;
 
 import lombok.Data;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 @Data
 public class Activity {
     private int activityId;
     private String name;
-    private Date timestamp;
+    private LocalDate timestamp;
     private String location;
     private String description;
 }
