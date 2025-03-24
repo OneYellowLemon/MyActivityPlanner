@@ -4,11 +4,15 @@ import com.myactivityplanner.enterprise.dto.Activity;
 import com.myactivityplanner.enterprise.dto.User;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
 @Service
 public class ActivityServiceStub implements IActivityService {
+
+    private final List<Activity> activities = new ArrayList<>();
+    private final List<User> users = new ArrayList<>();
 
     private Activity createTestActivity(int id, String name, String location) {
         Activity activity = new Activity();
@@ -30,30 +34,20 @@ public class ActivityServiceStub implements IActivityService {
 
     @Override
     public List<User> getUsersSignedUpForActivity(int activityId) {
-        User testUser = new User();
-        testUser.setFirstName("Test First Name");
-        testUser.setLastName("Test Last Name");
+        User testUser = createTestUser(1);
         return List.of(testUser);
     }
 
     @Override
     public List<Activity> getActivitiesForDate(Date date) {
-        Activity activity = new Activity();
-        activity.setActivityId(1);
-        activity.setName("Test Activity");
-        activity.setDescription("This is a test activity");
-        activity.setLocation("Test Location");
+        Activity activity = createTestActivity(1, "Test Activity", "Test Location");
         activity.setTimestamp(date);
         return List.of(activity);
     }
 
     @Override
     public List<Activity> getSignedUpActivitiesForUser(int userId) {
-        Activity activity = new Activity();
-        activity.setActivityId(1);
-        activity.setName("Test Activity");
-        activity.setDescription("This is a test activity");
-        activity.setLocation("Test Location");
+        Activity activity = createTestActivity(1, "Test Activity", "Test Location");
         activity.setTimestamp(new Date());
         return List.of(activity);
     }
@@ -75,22 +69,19 @@ public class ActivityServiceStub implements IActivityService {
 
     @Override
     public Activity getActivity(int activityId) {
-        Activity activity = new Activity();
-        activity.setActivityId(activityId);
-        activity.setName("Test Activity");
-        activity.setDescription("This is a test activity");
-        activity.setLocation("Test Location");
-        activity.setTimestamp(new Date());
-        return activity;
+        return activities.stream()
+                .filter(activity -> activity.getActivityId() == activityId)
+                .findFirst()
+                .orElse(null);
     }
 
     @Override
     public boolean saveActivity(Activity activity) {
-        return true;
+        return activities.add(activity);
     }
 
     @Override
     public boolean deleteActivity(int activityId) {
-        return true;
+        return activities.removeIf(activity -> activity.getActivityId() == activityId);
     }
 }
