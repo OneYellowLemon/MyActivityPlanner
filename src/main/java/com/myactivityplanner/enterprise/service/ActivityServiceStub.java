@@ -10,6 +10,24 @@ import java.util.List;
 @Service
 public class ActivityServiceStub implements IActivityService {
 
+    private Activity createTestActivity(int id, String name, String location) {
+        Activity activity = new Activity();
+        activity.setActivityId(id);
+        activity.setName(name);
+        activity.setDescription("This is a test activity");
+        activity.setLocation(location);
+        activity.setTimestamp(new Date());
+        return activity;
+    }
+
+    private User createTestUser(int userId) {
+        User user = new User();
+        user.setUserId(userId);
+        user.setFirstName("Test First Name");
+        user.setLastName("Test Last Name");
+        return user;
+    }
+
     @Override
     public List<User> getUsersSignedUpForActivity(int activityId) {
         User testUser = new User();
