@@ -7,16 +7,64 @@
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\main\\java\\com\\myactivityplanner\\enterprise\\service\\ActivityServiceStub.java||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Paul\\source\\repos\\MyActivityPlanner\\src\\main\\java\\com\\myactivityplanner\\enterprise\\dto\\User.java||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\main\\java\\com\\myactivityplanner\\enterprise\\dto\\User.java||{3B902123-F8A7-4915-9F01-361F908088D0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Paul\\source\\repos\\MyActivityPlanner\\src\\main\\java\\com\\myactivityplanner\\enterprise\\dto\\Activity.java||{3B902123-F8A7-4915-9F01-361F908088D0}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\main\\java\\com\\myactivityplanner\\enterprise\\dto\\Activity.java||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Paul\\source\\repos\\MyActivityPlanner\\src\\main\\java\\com\\myactivityplanner\\enterprise\\service\\IActivityService.java||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\main\\java\\com\\myactivityplanner\\enterprise\\service\\IActivityService.java||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Paul\\source\\repos\\MyActivityPlanner\\src\\main\\java\\com\\myactivityplanner\\enterprise\\ActivityController.java||{3B902123-F8A7-4915-9F01-361F908088D0}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\main\\java\\com\\myactivityplanner\\enterprise\\ActivityController.java||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Paul\\source\\repos\\MyActivityPlanner\\src\\main\\java\\com\\myactivityplanner\\enterprise\\service\\UserServiceStub.java||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\main\\java\\com\\myactivityplanner\\enterprise\\service\\UserServiceStub.java||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Paul\\source\\repos\\MyActivityPlanner\\src\\main\\java\\com\\myactivityplanner\\enterprise\\dao\\ActivityDAOStub.java||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\main\\java\\com\\myactivityplanner\\enterprise\\dao\\ActivityDAOStub.java||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Paul\\source\\repos\\MyActivityPlanner\\src\\main\\java\\com\\myactivityplanner\\enterprise\\dao\\IUserDAO.java||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\main\\java\\com\\myactivityplanner\\enterprise\\dao\\IUserDAO.java||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Paul\\source\\repos\\MyActivityPlanner\\src\\main\\java\\com\\myactivityplanner\\enterprise\\dao\\UserActivityDAOStub.java||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\main\\java\\com\\myactivityplanner\\enterprise\\dao\\UserActivityDAOStub.java||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Paul\\source\\repos\\MyActivityPlanner\\src\\main\\java\\com\\myactivityplanner\\enterprise\\dao\\IUserActivityDAO.java||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\main\\java\\com\\myactivityplanner\\enterprise\\dao\\IUserActivityDAO.java||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Paul\\source\\repos\\MyActivityPlanner\\src\\test\\java\\com\\myactivityplanner\\enterprise\\MyActivityPlannerApplicationTests.java||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\test\\java\\com\\myactivityplanner\\enterprise\\MyActivityPlannerApplicationTests.java||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Paul\\source\\repos\\MyActivityPlanner\\src\\main\\java\\com\\myactivityplanner\\enterprise\\dto\\User.java||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\main\\java\\com\\myactivityplanner\\enterprise\\dto\\User.java||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Paul\\source\\repos\\MyActivityPlanner\\src\\main\\java\\com\\myactivityplanner\\enterprise\\MyActivityPlannerApplication.java||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\main\\java\\com\\myactivityplanner\\enterprise\\MyActivityPlannerApplication.java||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Paul\\source\\repos\\MyActivityPlanner\\src\\main\\java\\com\\myactivityplanner\\enterprise\\dao\\UserDAOStub.java||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\main\\java\\com\\myactivityplanner\\enterprise\\dao\\UserDAOStub.java||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Paul\\source\\repos\\MyActivityPlanner\\src\\main\\java\\com\\myactivityplanner\\enterprise\\dao\\IActivityDAO.java||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\main\\java\\com\\myactivityplanner\\enterprise\\dao\\IActivityDAO.java||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Paul\\source\\repos\\MyActivityPlanner\\src\\main\\java\\com\\myactivityplanner\\enterprise\\UserController.java||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\main\\java\\com\\myactivityplanner\\enterprise\\UserController.java||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Paul\\source\\repos\\MyActivityPlanner\\README.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:README.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
     }
   ],
   "DocumentGroupContainers": [
@@ -36,14 +84,144 @@
               "RelativeDocumentMoniker": "src\\main\\java\\com\\myactivityplanner\\enterprise\\service\\ActivityServiceStub.java",
               "ToolTip": "C:\\Users\\Paul\\source\\repos\\MyActivityPlanner\\src\\main\\java\\com\\myactivityplanner\\enterprise\\service\\ActivityServiceStub.java",
               "RelativeToolTip": "src\\main\\java\\com\\myactivityplanner\\enterprise\\service\\ActivityServiceStub.java",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAwwBYAAAAHAAAAAAAAAA==",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAwwFUAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001630|",
               "WhenOpened": "2025-03-24T00:54:26.955Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ActivityController.java",
+              "DocumentMoniker": "C:\\Users\\Paul\\source\\repos\\MyActivityPlanner\\src\\main\\java\\com\\myactivityplanner\\enterprise\\ActivityController.java",
+              "RelativeDocumentMoniker": "src\\main\\java\\com\\myactivityplanner\\enterprise\\ActivityController.java",
+              "ToolTip": "C:\\Users\\Paul\\source\\repos\\MyActivityPlanner\\src\\main\\java\\com\\myactivityplanner\\enterprise\\ActivityController.java",
+              "RelativeToolTip": "src\\main\\java\\com\\myactivityplanner\\enterprise\\ActivityController.java",
+              "ViewState": "AgIAAGcAAAAAAAAAAAAwwIAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001630|",
+              "WhenOpened": "2025-03-24T00:46:00.342Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UserServiceStub.java",
+              "DocumentMoniker": "C:\\Users\\Paul\\source\\repos\\MyActivityPlanner\\src\\main\\java\\com\\myactivityplanner\\enterprise\\service\\UserServiceStub.java",
+              "RelativeDocumentMoniker": "src\\main\\java\\com\\myactivityplanner\\enterprise\\service\\UserServiceStub.java",
+              "ToolTip": "C:\\Users\\Paul\\source\\repos\\MyActivityPlanner\\src\\main\\java\\com\\myactivityplanner\\enterprise\\service\\UserServiceStub.java",
+              "RelativeToolTip": "src\\main\\java\\com\\myactivityplanner\\enterprise\\service\\UserServiceStub.java",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001630|",
+              "WhenOpened": "2025-03-24T01:04:59.675Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IActivityService.java",
+              "DocumentMoniker": "C:\\Users\\Paul\\source\\repos\\MyActivityPlanner\\src\\main\\java\\com\\myactivityplanner\\enterprise\\service\\IActivityService.java",
+              "RelativeDocumentMoniker": "src\\main\\java\\com\\myactivityplanner\\enterprise\\service\\IActivityService.java",
+              "ToolTip": "C:\\Users\\Paul\\source\\repos\\MyActivityPlanner\\src\\main\\java\\com\\myactivityplanner\\enterprise\\service\\IActivityService.java",
+              "RelativeToolTip": "src\\main\\java\\com\\myactivityplanner\\enterprise\\service\\IActivityService.java",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001630|",
+              "WhenOpened": "2025-03-24T01:01:23.436Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "Activity.java",
+              "DocumentMoniker": "C:\\Users\\Paul\\source\\repos\\MyActivityPlanner\\src\\main\\java\\com\\myactivityplanner\\enterprise\\dto\\Activity.java",
+              "RelativeDocumentMoniker": "src\\main\\java\\com\\myactivityplanner\\enterprise\\dto\\Activity.java",
+              "ToolTip": "C:\\Users\\Paul\\source\\repos\\MyActivityPlanner\\src\\main\\java\\com\\myactivityplanner\\enterprise\\dto\\Activity.java",
+              "RelativeToolTip": "src\\main\\java\\com\\myactivityplanner\\enterprise\\dto\\Activity.java",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001630|",
+              "WhenOpened": "2025-03-24T00:54:24.149Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ActivityDAOStub.java",
+              "DocumentMoniker": "C:\\Users\\Paul\\source\\repos\\MyActivityPlanner\\src\\main\\java\\com\\myactivityplanner\\enterprise\\dao\\ActivityDAOStub.java",
+              "RelativeDocumentMoniker": "src\\main\\java\\com\\myactivityplanner\\enterprise\\dao\\ActivityDAOStub.java",
+              "ToolTip": "C:\\Users\\Paul\\source\\repos\\MyActivityPlanner\\src\\main\\java\\com\\myactivityplanner\\enterprise\\dao\\ActivityDAOStub.java",
+              "RelativeToolTip": "src\\main\\java\\com\\myactivityplanner\\enterprise\\dao\\ActivityDAOStub.java",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAwwCYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001630|",
+              "WhenOpened": "2025-03-24T01:02:57.374Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IUserDAO.java",
+              "DocumentMoniker": "C:\\Users\\Paul\\source\\repos\\MyActivityPlanner\\src\\main\\java\\com\\myactivityplanner\\enterprise\\dao\\IUserDAO.java",
+              "RelativeDocumentMoniker": "src\\main\\java\\com\\myactivityplanner\\enterprise\\dao\\IUserDAO.java",
+              "ToolTip": "C:\\Users\\Paul\\source\\repos\\MyActivityPlanner\\src\\main\\java\\com\\myactivityplanner\\enterprise\\dao\\IUserDAO.java",
+              "RelativeToolTip": "src\\main\\java\\com\\myactivityplanner\\enterprise\\dao\\IUserDAO.java",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001630|",
+              "WhenOpened": "2025-03-24T01:06:49.924Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UserActivityDAOStub.java",
+              "DocumentMoniker": "C:\\Users\\Paul\\source\\repos\\MyActivityPlanner\\src\\main\\java\\com\\myactivityplanner\\enterprise\\dao\\UserActivityDAOStub.java",
+              "RelativeDocumentMoniker": "src\\main\\java\\com\\myactivityplanner\\enterprise\\dao\\UserActivityDAOStub.java",
+              "ToolTip": "C:\\Users\\Paul\\source\\repos\\MyActivityPlanner\\src\\main\\java\\com\\myactivityplanner\\enterprise\\dao\\UserActivityDAOStub.java",
+              "RelativeToolTip": "src\\main\\java\\com\\myactivityplanner\\enterprise\\dao\\UserActivityDAOStub.java",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001630|",
+              "WhenOpened": "2025-03-24T01:06:51.372Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "IUserActivityDAO.java",
+              "DocumentMoniker": "C:\\Users\\Paul\\source\\repos\\MyActivityPlanner\\src\\main\\java\\com\\myactivityplanner\\enterprise\\dao\\IUserActivityDAO.java",
+              "RelativeDocumentMoniker": "src\\main\\java\\com\\myactivityplanner\\enterprise\\dao\\IUserActivityDAO.java",
+              "ToolTip": "C:\\Users\\Paul\\source\\repos\\MyActivityPlanner\\src\\main\\java\\com\\myactivityplanner\\enterprise\\dao\\IUserActivityDAO.java",
+              "RelativeToolTip": "src\\main\\java\\com\\myactivityplanner\\enterprise\\dao\\IUserActivityDAO.java",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001630|",
+              "WhenOpened": "2025-03-24T01:06:49.045Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "MyActivityPlannerApplicationTests.java",
+              "DocumentMoniker": "C:\\Users\\Paul\\source\\repos\\MyActivityPlanner\\src\\test\\java\\com\\myactivityplanner\\enterprise\\MyActivityPlannerApplicationTests.java",
+              "RelativeDocumentMoniker": "src\\test\\java\\com\\myactivityplanner\\enterprise\\MyActivityPlannerApplicationTests.java",
+              "ToolTip": "C:\\Users\\Paul\\source\\repos\\MyActivityPlanner\\src\\test\\java\\com\\myactivityplanner\\enterprise\\MyActivityPlannerApplicationTests.java",
+              "RelativeToolTip": "src\\test\\java\\com\\myactivityplanner\\enterprise\\MyActivityPlannerApplicationTests.java",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001630|",
+              "WhenOpened": "2025-03-24T01:13:42.88Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "MyActivityPlannerApplication.java",
+              "DocumentMoniker": "C:\\Users\\Paul\\source\\repos\\MyActivityPlanner\\src\\main\\java\\com\\myactivityplanner\\enterprise\\MyActivityPlannerApplication.java",
+              "RelativeDocumentMoniker": "src\\main\\java\\com\\myactivityplanner\\enterprise\\MyActivityPlannerApplication.java",
+              "ToolTip": "C:\\Users\\Paul\\source\\repos\\MyActivityPlanner\\src\\main\\java\\com\\myactivityplanner\\enterprise\\MyActivityPlannerApplication.java",
+              "RelativeToolTip": "src\\main\\java\\com\\myactivityplanner\\enterprise\\MyActivityPlannerApplication.java",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001630|",
+              "WhenOpened": "2025-03-24T01:01:40.725Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "User.java",
               "DocumentMoniker": "C:\\Users\\Paul\\source\\repos\\MyActivityPlanner\\src\\main\\java\\com\\myactivityplanner\\enterprise\\dto\\User.java",
               "RelativeDocumentMoniker": "src\\main\\java\\com\\myactivityplanner\\enterprise\\dto\\User.java",
@@ -56,28 +234,54 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Activity.java",
-              "DocumentMoniker": "C:\\Users\\Paul\\source\\repos\\MyActivityPlanner\\src\\main\\java\\com\\myactivityplanner\\enterprise\\dto\\Activity.java",
-              "RelativeDocumentMoniker": "src\\main\\java\\com\\myactivityplanner\\enterprise\\dto\\Activity.java",
-              "ToolTip": "C:\\Users\\Paul\\source\\repos\\MyActivityPlanner\\src\\main\\java\\com\\myactivityplanner\\enterprise\\dto\\Activity.java",
-              "RelativeToolTip": "src\\main\\java\\com\\myactivityplanner\\enterprise\\dto\\Activity.java",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 12,
+              "Title": "UserDAOStub.java",
+              "DocumentMoniker": "C:\\Users\\Paul\\source\\repos\\MyActivityPlanner\\src\\main\\java\\com\\myactivityplanner\\enterprise\\dao\\UserDAOStub.java",
+              "RelativeDocumentMoniker": "src\\main\\java\\com\\myactivityplanner\\enterprise\\dao\\UserDAOStub.java",
+              "ToolTip": "C:\\Users\\Paul\\source\\repos\\MyActivityPlanner\\src\\main\\java\\com\\myactivityplanner\\enterprise\\dao\\UserDAOStub.java",
+              "RelativeToolTip": "src\\main\\java\\com\\myactivityplanner\\enterprise\\dao\\UserDAOStub.java",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001630|",
-              "WhenOpened": "2025-03-24T00:54:24.149Z",
+              "WhenOpened": "2025-03-24T01:06:53.028Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ActivityController.java",
-              "DocumentMoniker": "C:\\Users\\Paul\\source\\repos\\MyActivityPlanner\\src\\main\\java\\com\\myactivityplanner\\enterprise\\ActivityController.java",
-              "RelativeDocumentMoniker": "src\\main\\java\\com\\myactivityplanner\\enterprise\\ActivityController.java",
-              "ToolTip": "C:\\Users\\Paul\\source\\repos\\MyActivityPlanner\\src\\main\\java\\com\\myactivityplanner\\enterprise\\ActivityController.java",
-              "RelativeToolTip": "src\\main\\java\\com\\myactivityplanner\\enterprise\\ActivityController.java",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABIAAAAIAAAAAAAAAA==",
+              "DocumentIndex": 13,
+              "Title": "IActivityDAO.java",
+              "DocumentMoniker": "C:\\Users\\Paul\\source\\repos\\MyActivityPlanner\\src\\main\\java\\com\\myactivityplanner\\enterprise\\dao\\IActivityDAO.java",
+              "RelativeDocumentMoniker": "src\\main\\java\\com\\myactivityplanner\\enterprise\\dao\\IActivityDAO.java",
+              "ToolTip": "C:\\Users\\Paul\\source\\repos\\MyActivityPlanner\\src\\main\\java\\com\\myactivityplanner\\enterprise\\dao\\IActivityDAO.java",
+              "RelativeToolTip": "src\\main\\java\\com\\myactivityplanner\\enterprise\\dao\\IActivityDAO.java",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001630|",
-              "WhenOpened": "2025-03-24T00:46:00.342Z",
+              "WhenOpened": "2025-03-24T01:06:47.967Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "UserController.java",
+              "DocumentMoniker": "C:\\Users\\Paul\\source\\repos\\MyActivityPlanner\\src\\main\\java\\com\\myactivityplanner\\enterprise\\UserController.java",
+              "RelativeDocumentMoniker": "src\\main\\java\\com\\myactivityplanner\\enterprise\\UserController.java",
+              "ToolTip": "C:\\Users\\Paul\\source\\repos\\MyActivityPlanner\\src\\main\\java\\com\\myactivityplanner\\enterprise\\UserController.java",
+              "RelativeToolTip": "src\\main\\java\\com\\myactivityplanner\\enterprise\\UserController.java",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001630|",
+              "WhenOpened": "2025-03-24T01:04:02.666Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "README.md",
+              "DocumentMoniker": "C:\\Users\\Paul\\source\\repos\\MyActivityPlanner\\README.md",
+              "RelativeDocumentMoniker": "README.md",
+              "ToolTip": "C:\\Users\\Paul\\source\\repos\\MyActivityPlanner\\README.md",
+              "RelativeToolTip": "README.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-03-24T01:02:52.213Z",
               "EditorCaption": ""
             }
           ]

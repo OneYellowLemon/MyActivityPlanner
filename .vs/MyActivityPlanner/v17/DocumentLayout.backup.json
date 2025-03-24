@@ -1,12 +1,88 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Paul\\source\\repos\\MyActivityPlanner\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Paul\\source\\repos\\MyActivityPlanner\\src\\main\\java\\com\\myactivityplanner\\enterprise\\service\\ActivityServiceStub.java||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\main\\java\\com\\myactivityplanner\\enterprise\\service\\ActivityServiceStub.java||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Paul\\source\\repos\\MyActivityPlanner\\src\\main\\java\\com\\myactivityplanner\\enterprise\\dto\\User.java||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\main\\java\\com\\myactivityplanner\\enterprise\\dto\\User.java||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Paul\\source\\repos\\MyActivityPlanner\\src\\main\\java\\com\\myactivityplanner\\enterprise\\dto\\Activity.java||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\main\\java\\com\\myactivityplanner\\enterprise\\dto\\Activity.java||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Paul\\source\\repos\\MyActivityPlanner\\src\\main\\java\\com\\myactivityplanner\\enterprise\\ActivityController.java||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\main\\java\\com\\myactivityplanner\\enterprise\\ActivityController.java||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ActivityServiceStub.java",
+              "DocumentMoniker": "C:\\Users\\Paul\\source\\repos\\MyActivityPlanner\\src\\main\\java\\com\\myactivityplanner\\enterprise\\service\\ActivityServiceStub.java",
+              "RelativeDocumentMoniker": "src\\main\\java\\com\\myactivityplanner\\enterprise\\service\\ActivityServiceStub.java",
+              "ToolTip": "C:\\Users\\Paul\\source\\repos\\MyActivityPlanner\\src\\main\\java\\com\\myactivityplanner\\enterprise\\service\\ActivityServiceStub.java",
+              "RelativeToolTip": "src\\main\\java\\com\\myactivityplanner\\enterprise\\service\\ActivityServiceStub.java",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAwwBYAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001630|",
+              "WhenOpened": "2025-03-24T00:54:26.955Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "User.java",
+              "DocumentMoniker": "C:\\Users\\Paul\\source\\repos\\MyActivityPlanner\\src\\main\\java\\com\\myactivityplanner\\enterprise\\dto\\User.java",
+              "RelativeDocumentMoniker": "src\\main\\java\\com\\myactivityplanner\\enterprise\\dto\\User.java",
+              "ToolTip": "C:\\Users\\Paul\\source\\repos\\MyActivityPlanner\\src\\main\\java\\com\\myactivityplanner\\enterprise\\dto\\User.java",
+              "RelativeToolTip": "src\\main\\java\\com\\myactivityplanner\\enterprise\\dto\\User.java",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001630|",
+              "WhenOpened": "2025-03-24T00:54:25.426Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Activity.java",
+              "DocumentMoniker": "C:\\Users\\Paul\\source\\repos\\MyActivityPlanner\\src\\main\\java\\com\\myactivityplanner\\enterprise\\dto\\Activity.java",
+              "RelativeDocumentMoniker": "src\\main\\java\\com\\myactivityplanner\\enterprise\\dto\\Activity.java",
+              "ToolTip": "C:\\Users\\Paul\\source\\repos\\MyActivityPlanner\\src\\main\\java\\com\\myactivityplanner\\enterprise\\dto\\Activity.java",
+              "RelativeToolTip": "src\\main\\java\\com\\myactivityplanner\\enterprise\\dto\\Activity.java",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001630|",
+              "WhenOpened": "2025-03-24T00:54:24.149Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ActivityController.java",
+              "DocumentMoniker": "C:\\Users\\Paul\\source\\repos\\MyActivityPlanner\\src\\main\\java\\com\\myactivityplanner\\enterprise\\ActivityController.java",
+              "RelativeDocumentMoniker": "src\\main\\java\\com\\myactivityplanner\\enterprise\\ActivityController.java",
+              "ToolTip": "C:\\Users\\Paul\\source\\repos\\MyActivityPlanner\\src\\main\\java\\com\\myactivityplanner\\enterprise\\ActivityController.java",
+              "RelativeToolTip": "src\\main\\java\\com\\myactivityplanner\\enterprise\\ActivityController.java",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABIAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001630|",
+              "WhenOpened": "2025-03-24T00:46:00.342Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

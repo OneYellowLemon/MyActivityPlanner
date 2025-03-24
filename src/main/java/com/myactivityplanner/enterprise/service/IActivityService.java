@@ -57,7 +57,7 @@ public interface IActivityService {
      * @param activityId The ID of the activity to get
      * @return The activity with the specified ID
      */
-    Activity getActivity(int activityId);
+    Optional<Activity> getActivity(int activityId);
 
     /**
      * Save an activity
