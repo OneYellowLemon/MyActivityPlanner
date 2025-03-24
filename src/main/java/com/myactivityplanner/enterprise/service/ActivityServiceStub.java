@@ -2,12 +2,14 @@ package com.myactivityplanner.enterprise.service;
 
 import com.myactivityplanner.enterprise.dto.Activity;
 import com.myactivityplanner.enterprise.dto.User;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
 import java.util.List;
 
 @Service
+@Profile("test")
 public class ActivityServiceStub implements IActivityService {
 
     @Override
