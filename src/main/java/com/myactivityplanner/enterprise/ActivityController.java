@@ -16,7 +16,7 @@ public class ActivityController {
     @Autowired
     IActivityService activityService;
 
-    /**
+    /** 
      * Handle the root (/) endpoint and return a start page
      * @return index.html UI page
      */
