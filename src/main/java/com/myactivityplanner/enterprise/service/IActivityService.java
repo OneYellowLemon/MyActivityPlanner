@@ -3,7 +3,7 @@ package com.myactivityplanner.enterprise.service;
 import com.myactivityplanner.enterprise.dto.Activity;
 import com.myactivityplanner.enterprise.dto.User;
 
-import java.util.Date;
+import java.time.LocalDate;
 import java.util.List;
 
 public interface IActivityService {
@@ -21,7 +21,7 @@ public interface IActivityService {
      * @return A list of activities for the specified date
      * @throws Exception If an error occurs
      */
-    List<Activity> getActivitiesForDate(Date date) throws Exception;
+    List<Activity> getActivitiesForDate(LocalDate date) throws Exception;
 
     /**
      * Get a list of activities a user is signed up for

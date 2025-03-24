@@ -2,12 +2,14 @@ package com.myactivityplanner.enterprise.service;
 
 import com.myactivityplanner.enterprise.dto.Activity;
 import com.myactivityplanner.enterprise.dto.User;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
-import java.util.Date;
+import java.time.LocalDate;
 import java.util.List;
 
 @Service
+@Profile("test")
 public class ActivityServiceStub implements IActivityService {
 
     @Override
@@ -19,13 +21,13 @@ public class ActivityServiceStub implements IActivityService {
     }
 
     @Override
-    public List<Activity> getActivitiesForDate(Date date) {
+    public List<Activity> getActivitiesForDate(LocalDate date) {
         Activity activity = new Activity();
         activity.setActivityId(1);
         activity.setName("Test Activity");
         activity.setDescription("This is a test activity");
         activity.setLocation("Test Location");
-        activity.setTimestamp(date);
+        activity.setTimestamp(LocalDate.now());
         return List.of(activity);
     }
 
@@ -36,7 +38,7 @@ public class ActivityServiceStub implements IActivityService {
         activity.setName("Test Activity");
         activity.setDescription("This is a test activity");
         activity.setLocation("Test Location");
-        activity.setTimestamp(new Date());
+        activity.setTimestamp(LocalDate.now());
         return List.of(activity);
     }
 
@@ -62,7 +64,7 @@ public class ActivityServiceStub implements IActivityService {
         activity.setName("Test Activity");
         activity.setDescription("This is a test activity");
         activity.setLocation("Test Location");
-        activity.setTimestamp(new Date());
+        activity.setTimestamp(LocalDate.now());
         return activity;
     }
 

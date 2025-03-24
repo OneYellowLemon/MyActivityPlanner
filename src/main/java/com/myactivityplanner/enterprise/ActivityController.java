@@ -9,7 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Date;
+import java.time.LocalDate;
 import java.util.List;
 
 @Controller
@@ -161,7 +161,7 @@ public class ActivityController {
      */
     @PostMapping("api/activity/activitiesForDate")
     @ResponseBody
-    public ResponseEntity<List<Activity>> getActivitiesForDate(@RequestBody Date date) {
+    public ResponseEntity<List<Activity>> getActivitiesForDate(@RequestBody LocalDate date) {
         try {
             return ResponseEntity.ok(activityService.getActivitiesForDate(date));
         } catch (Exception e) {
