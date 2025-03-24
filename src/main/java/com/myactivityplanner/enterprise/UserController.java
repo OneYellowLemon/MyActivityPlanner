@@ -3,6 +3,8 @@ package com.myactivityplanner.enterprise;
 import com.myactivityplanner.enterprise.dto.User;
 import com.myactivityplanner.enterprise.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
@@ -15,12 +17,16 @@ public class UserController {
     /**
      * API endpoint to create a new user
      * @param user The user to create
-     * @return True if the user was created successfully, otherwise false
+     * @return The created user
      */
     @PostMapping("api/user")
     @ResponseBody
-    public boolean createUser(@RequestBody User user) {
-        return userService.createUser(user.getFirstName(), user.getLastName());
+    public ResponseEntity<User> createUser(@RequestBody User user) {
+        try {
+            return ResponseEntity.ok(userService.createUser(user.getFirstName(), user.getLastName()));
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+        }
     }
 
     /**
@@ -30,7 +36,11 @@ public class UserController {
      */
     @GetMapping("api/user/{userId}")
     @ResponseBody
-    public String getUserName(@PathVariable int userId) {
-        return userService.getUserName(userId);
+    public ResponseEntity<String> getUserName(@PathVariable int userId) {
+        try {
+            return ResponseEntity.ok(userService.getUserName(userId));
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+        }
     }
 }

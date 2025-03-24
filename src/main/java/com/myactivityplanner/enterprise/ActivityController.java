@@ -4,11 +4,13 @@ import com.myactivityplanner.enterprise.dto.Activity;
 import com.myactivityplanner.enterprise.dto.User;
 import com.myactivityplanner.enterprise.service.IActivityService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
 import java.util.Date;
+import java.util.List;
 
 @Controller
 public class ActivityController {
@@ -32,30 +34,42 @@ public class ActivityController {
      */
     @GetMapping("api/activity/{id}")
     @ResponseBody
-    public Activity getActivity(@PathVariable int id) {
-        return activityService.getActivity(id);
+    public ResponseEntity<Activity> getActivity(@PathVariable int id) {
+        try {
+            return ResponseEntity.ok(activityService.getActivity(id));
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+        }
     }
 
     /**
      * API endpoint to save an activity
      * @param activity The activity to save
-     * @return True if the activity was saved successfully, otherwise false
+     * @return The saved activity
      */
     @PutMapping("api/activity")
     @ResponseBody
-    public boolean saveActivity(@RequestBody Activity activity) {
-        return activityService.saveActivity(activity);
+    public ResponseEntity<Activity> saveActivity(@RequestBody Activity activity) {
+        try {
+            return ResponseEntity.ok(activityService.saveActivity(activity));
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+        }
     }
 
     /**
      * API endpoint to delete an activity
      * @param id The ID of the activity to delete
-     * @return True if the activity was deleted successfully, otherwise false
+     * @return The ID of the deleted activity
      */
     @DeleteMapping("api/activity/{id}")
     @ResponseBody
-    public boolean deleteActivity(@PathVariable int id) {
-        return activityService.deleteActivity(id);
+    public ResponseEntity<Integer> deleteActivity(@PathVariable int id) {
+        try {
+            return ResponseEntity.ok(activityService.deleteActivity(id));
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+        }
     }
 
     /**
@@ -66,8 +80,12 @@ public class ActivityController {
      */
     @GetMapping("api/activity/signedup/{activityId}/{userId}")
     @ResponseBody
-    public boolean isUserSignedUpForActivity(@PathVariable int userId, @PathVariable int activityId) {
-        return activityService.isUserSignedUpForActivity(userId, activityId);
+    public ResponseEntity<Boolean> isUserSignedUpForActivity(@PathVariable int userId, @PathVariable int activityId) {
+        try {
+            return ResponseEntity.ok(activityService.isUserSignedUpForActivity(userId, activityId));
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+        }
     }
 
     /**
@@ -77,8 +95,12 @@ public class ActivityController {
      */
     @GetMapping("api/activity/signedupusers/{activityId}")
     @ResponseBody
-    public List<User> getUsersSignedUpForActivity(@PathVariable int activityId) {
-        return activityService.getUsersSignedUpForActivity(activityId);
+    public ResponseEntity<List<User>> getUsersSignedUpForActivity(@PathVariable int activityId) {
+        try {
+            return ResponseEntity.ok(activityService.getUsersSignedUpForActivity(activityId));
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+        }
     }
 
     /**
@@ -88,8 +110,12 @@ public class ActivityController {
      */
     @GetMapping("api/activity/signedupfor/{userId}")
     @ResponseBody
-    public List<Activity> getSignedUpActivitiesForUser(@PathVariable int userId) {
-        return activityService.getSignedUpActivitiesForUser(userId);
+    public ResponseEntity<List<Activity>> getSignedUpActivitiesForUser(@PathVariable int userId) {
+        try {
+            return ResponseEntity.ok(activityService.getSignedUpActivitiesForUser(userId));
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+        }
     }
 
     /**
@@ -99,31 +125,43 @@ public class ActivityController {
      */
     @PostMapping("api/activity/activitiesForDate")
     @ResponseBody
-    public List<Activity> getActivitiesForDate(@RequestBody Date date) {
-        return activityService.getActivitiesForDate(date);
+    public ResponseEntity<List<Activity>> getActivitiesForDate(@RequestBody Date date) {
+        try {
+            return ResponseEntity.ok(activityService.getActivitiesForDate(date));
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+        }
     }
 
     /**
      * API endpoint to sign up a user for an activity
      * @param activityId The ID of the activity to sign up for
      * @param userId The ID of the user to sign up
-     * @return True if the user was signed up successfully, otherwise false
      */
     @PostMapping("api/activity/signup/{activityId}/{userId}")
     @ResponseBody
-    public boolean signUpForActivity(@PathVariable int activityId, @PathVariable int userId) {
-        return activityService.signUpForActivity(activityId, userId);
+    public ResponseEntity<Void> signUpForActivity(@PathVariable int activityId, @PathVariable int userId) {
+        try {
+            activityService.signUpForActivity(activityId, userId);
+            return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+        }
     }
 
     /**
      * API endpoint to withdraw a user from an activity
      * @param activityId The ID of the activity to withdraw the user from
      * @param userId The ID of the user to withdraw
-     * @return True if the user was withdrawn successfully, otherwise false
      */
     @DeleteMapping("api/activity/withdraw/{activityId}/{userId}")
     @ResponseBody
-    public boolean withdrawFromActivity(@PathVariable int activityId, @PathVariable int userId) {
-        return activityService.withdrawFromActivity(activityId, userId);
+    public ResponseEntity<Void> withdrawFromActivity(@PathVariable int activityId, @PathVariable int userId) {
+        try {
+            activityService.withdrawFromActivity(activityId, userId);
+            return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+        }
     }
 }
