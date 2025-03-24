@@ -25,14 +25,13 @@ public class ActivityDAOStub implements IActivityDAO {
     }
 
     @Override
-    public boolean saveActivity(Activity activity) {
+    public Activity saveActivity(Activity activity) {
         activities.put(activity.getActivityId(), activity);
-        return true;
+        return activity;
     }
 
     @Override
-    public boolean deleteActivity(int id) {
+    public void deleteActivity(int id) {
         activities.remove(id);
-        return true;
     }
 }

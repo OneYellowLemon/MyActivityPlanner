@@ -27,12 +27,12 @@ public class UserActivityDAOStub implements IUserActivityDAO {
     }
 
     @Override
-    public boolean signUpUser(int userId, int activityId) {
-        return true;
+    public void signUpUser(int userId, int activityId) {
+        // empty stub method (void)
     }
 
     @Override
-    public boolean withdrawUser(int userId, int activityId) {
-        return true;
+    public void withdrawUser(int userId, int activityId) {
+        // empty stub method (void)
     }
 }
