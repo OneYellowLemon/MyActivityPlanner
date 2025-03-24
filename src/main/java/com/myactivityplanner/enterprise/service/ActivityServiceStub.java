@@ -46,13 +46,13 @@ public class ActivityServiceStub implements IActivityService {
     }
 
     @Override
-    public boolean signUpForActivity(int activityId, int userId) {
-        return true;
+    public void signUpForActivity(int activityId, int userId) {
+        // empty stub method (void)
     }
 
     @Override
-    public boolean withdrawFromActivity(int activityId, int userId) {
-        return true;
+    public void withdrawFromActivity(int activityId, int userId) {
+        // empty stub method (void)
     }
 
     @Override
@@ -67,12 +67,12 @@ public class ActivityServiceStub implements IActivityService {
     }
 
     @Override
-    public boolean saveActivity(Activity activity) {
-        return true;
+    public Activity saveActivity(Activity activity) {
+        return activity;
     }
 
     @Override
-    public boolean deleteActivity(int activityId) {
-        return true;
+    public int deleteActivity(int activityId) {
+        return activityId;
     }
 }
