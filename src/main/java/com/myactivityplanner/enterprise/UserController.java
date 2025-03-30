@@ -36,7 +36,7 @@ public class UserController {
      */
     @GetMapping("api/user/{userId}")
     @ResponseBody
-    public ResponseEntity<User> getUserName(@PathVariable int userId) {
+    public ResponseEntity<String> getUserName(@PathVariable int userId) {
         try {
             return ResponseEntity.ok(userService.getUserName(userId));
         } catch (Exception e) {

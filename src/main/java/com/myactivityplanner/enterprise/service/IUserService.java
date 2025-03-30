@@ -19,5 +19,5 @@ public interface IUserService {
      * @return The full name of the user
      * @throws Exception If an error occurs
      */
-    User getUserName(int userId) throws Exception;
+    String getUserName(int userId) throws Exception;
 }

@@ -11,14 +11,12 @@ public class UserService implements IUserService {
     private IUserDAO userDAO;
     @Override
     public User createUser(String firstName, String lastName) throws Exception {
-        User newUser = new User();
-        newUser.setFirstName(firstName);
-        newUser.setLastName(lastName);
-        return newUser;
+        return userDAO.createUser(firstName, lastName);
     }
 
     @Override
-    public User getUserName(int userId) throws Exception {
-        return userDAO.getUserName(userId);
+    public String getUserName(int userId) throws Exception {
+        userDAO.getUserName(userId);
+        return "test user";
     }
 }
