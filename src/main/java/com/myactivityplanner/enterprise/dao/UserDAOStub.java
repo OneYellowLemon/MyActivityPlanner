@@ -3,17 +3,24 @@ package com.myactivityplanner.enterprise.dao;
 import com.myactivityplanner.enterprise.dto.User;
 import org.springframework.stereotype.Repository;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.Optional;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.atomic.AtomicInteger;
 
 @Repository
 public class UserDAOStub implements IUserDAO {
-    Map<Integer, User> users = new HashMap<>();
+
+    private final ConcurrentHashMap<Integer, User> users = new ConcurrentHashMap<>();
+    private final AtomicInteger userIdCounter = new AtomicInteger(1);  // Tracks the next available userId
 
     @Override
     public User createUser(String firstName, String lastName) {
+        if (firstName == null || firstName.trim().isEmpty() || lastName == null || lastName.trim().isEmpty()) {
+            throw new IllegalArgumentException("First name and last name cannot be null or empty");
+        }
+
         User user = new User();
-        user.setUserId(users.size() + 1);
+        user.setUserId(userIdCounter.getAndIncrement());  // Get and increment the userId
         user.setFirstName(firstName);
         user.setLastName(lastName);
         users.put(user.getUserId(), user);
@@ -21,7 +28,7 @@ public class UserDAOStub implements IUserDAO {
     }
 
     @Override
-    public User getUserName(int userId) {
-        return users.get(userId);
+    public Optional<User> getUserById(int userId) {
+        return Optional.ofNullable(users.get(userId));  // Returns an Optional instead of null
     }
 }
