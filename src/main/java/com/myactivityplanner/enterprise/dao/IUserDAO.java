@@ -20,5 +20,5 @@ public interface IUserDAO {
      * @return The user with the specified ID
      * @throws IOException If a database error occurs
      */
-    User getUserName(int userId) throws IOException;
+    User getUser(int userId) throws IOException;
 }

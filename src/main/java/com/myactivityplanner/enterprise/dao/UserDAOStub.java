@@ -21,7 +21,7 @@ public class UserDAOStub implements IUserDAO {
     }
 
     @Override
-    public User getUserName(int userId) {
+    public User getUser(int userId) {
         return users.get(userId);
     }
 }
