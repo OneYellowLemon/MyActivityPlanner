@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 public class UserService implements IUserService {
     @Autowired
     private IUserDAO userDAO;
+
     @Override
     public User createUser(String firstName, String lastName) throws Exception {
         return userDAO.createUser(firstName, lastName);
@@ -16,7 +17,7 @@ public class UserService implements IUserService {
 
     @Override
     public String getUserName(int userId) throws Exception {
-        userDAO.getUserName(userId);
-        return "test user";
+        User user = userDAO.getUser(userId);
+        return user.getFirstName() + " " + user.getLastName();
     }
 }
