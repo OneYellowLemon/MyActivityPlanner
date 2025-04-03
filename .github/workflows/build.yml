@@ -17,5 +17,10 @@ jobs:
           java-version: '21'
           distribution: 'temurin'
           cache: maven
+      - name: Create env.properties file
+        run: |
+          echo "DB_URL=${{ secrets.DB_URL }}" > env.properties
+          echo "DB_USER=${{ secrets.DB_USER }}" >> env.properties
+          echo "DB_PASSWORD=${{ secrets.DB_PASSWORD }}" >> env.properties
       - name: Build with Maven
         run: mvn -B package --file pom.xml
