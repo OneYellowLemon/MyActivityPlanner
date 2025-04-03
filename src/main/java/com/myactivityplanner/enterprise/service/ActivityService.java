@@ -2,25 +2,41 @@ package com.myactivityplanner.enterprise.service;
 
 import com.myactivityplanner.enterprise.dao.IActivityDAO;
 import com.myactivityplanner.enterprise.dao.IUserActivityDAO;
+import com.myactivityplanner.enterprise.dao.IUserDAO;
 import com.myactivityplanner.enterprise.dto.Activity;
 import com.myactivityplanner.enterprise.dto.User;
+import com.myactivityplanner.enterprise.dto.UserActivity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
 public class ActivityService implements IActivityService {
     @Autowired
-    private IActivityDAO activityDAO;
+    IActivityDAO activityDAO;
+
+    @Autowired
+    IUserDAO userDAO;
 
     @Autowired
     IUserActivityDAO userActivityDAO;
 
     @Override
     public List<User> getUsersSignedUpForActivity(int activityId) throws Exception {
-        return userActivityDAO.getUsersSignedUpForActivity(activityId);
+        List<UserActivity> userActivities = userActivityDAO.getAllUserActivities();
+        List<User> users = new ArrayList<>();
+
+        for (UserActivity userActivity : userActivities) {
+            if (userActivity.getActivity() == activityId) {
+                User user = userDAO.getUser(userActivity.getUser());
+                users.add(user);
+            }
+        }
+
+        return users;
     }
 
     @Override
@@ -36,12 +52,30 @@ public class ActivityService implements IActivityService {
 
     @Override
     public List<Activity> getSignedUpActivitiesForUser(int userId) throws Exception {
-        return userActivityDAO.getActivitiesUserIsSignedUpFor(userId);
+        List<UserActivity> userActivities = userActivityDAO.getAllUserActivities();
+
+        List<Activity> activities = new ArrayList<>();
+        for (UserActivity userActivity : userActivities) {
+            if (userActivity.getUser() == userId) {
+                Activity activity = activityDAO.getActivity(userActivity.getActivity());
+                activities.add(activity);
+            }
+        }
+
+        return activities;
     }
 
     @Override
     public boolean isUserSignedUpForActivity(int userId, int activityId) throws Exception {
-        return userActivityDAO.isUserSignedUpForActivity(userId, activityId);
+        List<UserActivity> userActivities = userActivityDAO.getAllUserActivities();
+
+        for (UserActivity userActivity : userActivities) {
+            if (userActivity.getUser() == userId && userActivity.getActivity() == activityId) {
+                return true;
+            }
+        }
+
+        return false;
     }
 
     @Override

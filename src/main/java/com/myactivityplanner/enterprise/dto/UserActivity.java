@@ -6,17 +6,13 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.Data;
 
-import java.time.LocalDate;
-
 @Entity
 @Data
-public class Activity {
+public class UserActivity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int activityId;
+    private int userActivityId;
 
-    private String name;
-    private LocalDate timestamp;
-    private String location;
-    private String description;
+    private int user;
+    private int activity;
 }
