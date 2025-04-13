@@ -2,6 +2,8 @@ package com.myactivityplanner.enterprise.service;
 
 import com.myactivityplanner.enterprise.dto.User;
 
+import java.util.List;
+
 public interface IUserService {
     /**
      * Create a new user
@@ -19,4 +21,11 @@ public interface IUserService {
      * @throws Exception If an error occurs
      */
     String getUserName(int userId) throws Exception;
+
+    /**
+     * Get the list of all users
+     * @return A list of all users
+     * @throws Exception If an error occurs
+     */
+    List<User> getUsers() throws Exception;
 }

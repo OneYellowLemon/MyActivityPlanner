@@ -5,6 +5,8 @@ import com.myactivityplanner.enterprise.dto.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class UserService implements IUserService {
     @Autowired
@@ -23,5 +25,10 @@ public class UserService implements IUserService {
         }
 
         return user.getFirstName() + " " + user.getLastName();
+    }
+
+    @Override
+    public List<User> getUsers() throws Exception {
+        return userDAO.getUsers();
     }
 }
