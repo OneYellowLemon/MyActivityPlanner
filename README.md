@@ -154,14 +154,6 @@ Users of the app can view activities day by day with details including the activ
 
 ---
 
-**Given**: The admin page is open and the user has entered data in the name, location, or description fields with more than 20 characters in the name field, 50 characters in the location field, or 500 characters in the description field
-
-**When**: The user clicks "Add Activity"
-
-**Then**: An error message is returned indicating which maximum character length was violated (20 for name, 50 for location, 500 for description)
-
----
-
 **Given**: The admin page is open and the user has entered data in date and time fields with the selected date and time in the past
 
 **When**: The user clicks "Add Activity"
@@ -205,14 +197,6 @@ Users of the app can view activities day by day with details including the activ
 **When**: The user clicks "Add User"
 
 **Then**: The user is created and a success confirmation is displayed with the message `User has been created with ID: <new user ID>` and the input fields are cleared
-
----
-
-**Given**: The admin page is open and the user has entered data in fields: first name, last name with more than 50 characters in either field
-
-**When**: The user clicks "Add User"
-
-**Then**: An error message is returned indicating that the maximum length of first or last name is 50 characters.
 
 ## Class Diagram
 
