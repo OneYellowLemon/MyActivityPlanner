@@ -30,6 +30,21 @@ public class UserController {
     }
 
     /**
+     * API endpoint to create a new user from an HTML form
+     * @param user The user to create
+     * @return The created user
+     */
+    @PostMapping("api/form/user")
+    public String createUserForm(@ModelAttribute User user) {
+        try {
+            userService.createUser(user.getFirstName(), user.getLastName());
+            return "redirect:/AdminAccount";
+        } catch (Exception e) {
+            return "redirect:/error?message=" + e.getMessage();
+        }
+    }
+
+    /**
      * API endpoint to get the name of a user by ID
      * @param userId The ID of the user to get
      * @return The name of the user with the specified ID
