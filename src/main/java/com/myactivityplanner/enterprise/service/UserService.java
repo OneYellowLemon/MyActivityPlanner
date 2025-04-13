@@ -18,6 +18,10 @@ public class UserService implements IUserService {
     @Override
     public String getUserName(int userId) throws Exception {
         User user = userDAO.getUser(userId);
+        if (user == null) {
+            return null;
+        }
+
         return user.getFirstName() + " " + user.getLastName();
     }
 }

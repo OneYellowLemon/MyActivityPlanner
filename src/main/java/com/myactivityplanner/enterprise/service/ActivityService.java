@@ -80,11 +80,21 @@ public class ActivityService implements IActivityService {
 
     @Override
     public void signUpForActivity(int activityId, int userId) throws Exception {
+        // Check if the user is already signed up for the activity
+        if (this.isUserSignedUpForActivity(userId, activityId)) {
+            throw new Exception("Already signed up for this activity!");
+        }
+
         userActivityDAO.signUpUser(userId, activityId);
     }
 
     @Override
     public void withdrawFromActivity(int activityId, int userId) throws Exception {
+        // Check if the user is signed up for the activity
+        if (!this.isUserSignedUpForActivity(userId, activityId)) {
+            throw new Exception("Not signed up for this activity!");
+        }
+
         userActivityDAO.withdrawUser(userId, activityId);
     }
 
@@ -100,6 +110,12 @@ public class ActivityService implements IActivityService {
 
     @Override
     public int deleteActivity(int activityId) throws Exception {
+        // Check if the activity exists
+        Activity activity = activityDAO.getActivity(activityId);
+        if (activity == null) {
+            return -1;
+        }
+
         activityDAO.deleteActivity(activityId);
         return activityId;
     }
