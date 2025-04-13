@@ -357,6 +357,8 @@ https://github.com/OneYellowLemon/MyActivityPlanner
 ## Milestones
 
 [Milestone 1](https://github.com/OneYellowLemon/MyActivityPlanner/milestone/1)
+[Milestone 2](https://github.com/OneYellowLemon/MyActivityPlanner/milestone/2)
+[Milestone 3](https://github.com/OneYellowLemon/MyActivityPlanner/milestone/3)
 
 ## Standup Meeting
 
