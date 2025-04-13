@@ -1,29 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MyActivityPlanner</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
-</head>
-<body>
-<h1>Welcome to my activity planner!</h1>
-<h2>Login Form</h2>
-<form>
-    <div class="userimage">
-    </div>
-    <div class="login">
-        <label for="uname"><b>Username</b></label>
-        <input type="text" placeholder="Enter Username" name="uname" id="uname" required>
 
-        <label for="psswrd"><b>Password</b></label>
-        <input type="password" placeholder="Enter Password" name="psw" id="psswrd" required>
-        <button onclick="document.getElementById('id01').style.display='block'"  >Login!</button>
-        <label>
-            <input type="checkbox" checked="checked" name="remember"> Remember me
-        </label>
-    </div>
-</form>
+    <style>
+        .welcome-box {
+            padding: 20px;
+        }
+
+        .user-id-input {
+            width: 200px;
+        }
+    </style>
+</head>
+<body class="d-flex justify-content-center align-items-center text-center vh-100">
+<div class="welcome-box border">
+    <h2>Welcome to MyActivityPlanner!</h2>
+    <p>Please enter your user ID</p>
+    <form action="/AvailableActivities">
+        <div class="d-flex justify-content-center align-items-center">
+            <input type="number" name="userId" class="form-control me-2 user-id-input" placeholder="User ID" required>
+            <button type="submit" class="btn btn-info text-white">Log in</button>
+        </div>
+    </form>
+    <p th:if="${invalidUser}" class="text-danger mt-3 mb-0">Invalid user ID. Please try again.</p>
+</div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
 </body>

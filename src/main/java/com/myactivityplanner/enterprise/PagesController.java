@@ -24,11 +24,22 @@ public class PagesController {
     IUserService userService;
 
     /**
-     * Handle the root (/) endpoint and return starting page
+     * Handle the root (/) endpoint and return login page
      * @return index.html
      */
     @RequestMapping("/")
-    public String index() {
+    public String index(Model model, @RequestParam(required = false) Integer userId, @RequestParam(required = false) boolean invalidUser) {
+        model.addAttribute("invalidUser", invalidUser);
+
+        // Attempt to auto login if userId is provided
+        if (userId != null) {
+            try {
+                return "redirect:/AvailableActivities?userId=" + userId;
+            } catch (Exception e) {
+                // Empty catch block (if auto login fails, just show normal login page)
+            }
+        }
+
         return "index";
     }
 
@@ -37,7 +48,20 @@ public class PagesController {
      * @return AvailableActivities.html
      */
     @RequestMapping("AvailableActivities")
-    public String AvailableActivities() {
+    public String AvailableActivities(Model model, @RequestParam(required = false) Integer userId) {
+        try {
+            // Redirect to login page if userId is null
+            if (userId == null) {
+                return "redirect:/";
+            }
+
+            // Ensure user is valid
+            if (userService.getUserName(userId) == null) {
+                return "redirect:/?invalidUser=true";
+            }
+        } catch (Exception e) {
+            return "redirect:/error?message=" + e.getMessage();
+        }
         return "AvailableActivities";
     }
 
