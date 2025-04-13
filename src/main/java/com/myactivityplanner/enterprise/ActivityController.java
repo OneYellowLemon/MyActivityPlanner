@@ -50,6 +50,21 @@ public class ActivityController {
     }
 
     /**
+     * API endpoint to save an activity from an HTML form
+     * @param activity The activity to save
+     * @return The saved activity
+     */
+    @PostMapping(value = "api/form/activity")
+    public String saveActivityForm(@ModelAttribute Activity activity) {
+        try {
+            activityService.saveActivity(activity);
+            return "redirect:/AdminAccount";
+        } catch (Exception e) {
+            return "redirect:/error?message=" + e.getMessage();
+        }
+    }
+
+    /**
      * API endpoint to delete an activity
      * @param id The ID of the activity to delete
      * @return The ID of the deleted activity
@@ -62,6 +77,21 @@ public class ActivityController {
             return deletedId == -1 ? ResponseEntity.notFound().build() : ResponseEntity.ok(deletedId);
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+        }
+    }
+
+    /**
+     * Endpoint to handle activity deletion from HTML form (workaround for buttons without using JavaScript)
+     * @param id The ID of the activity to delete
+     * @return Redirect to the admin page
+     */
+    @PostMapping("api/form/activity/delete/{id}")
+    public String deleteActivityForm(@PathVariable int id) {
+        try {
+            activityService.deleteActivity(id);
+            return "redirect:/AdminAccount";
+        } catch (Exception e) {
+            return "redirect:/error?message=" + e.getMessage();
         }
     }
 
