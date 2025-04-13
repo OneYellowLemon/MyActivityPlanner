@@ -3,7 +3,9 @@ package com.myactivityplanner.enterprise.dao;
 import com.myactivityplanner.enterprise.dto.User;
 import org.springframework.stereotype.Repository;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @Repository
@@ -23,5 +25,10 @@ public class UserDAOStub implements IUserDAO {
     @Override
     public User getUser(int userId) {
         return users.get(userId);
+    }
+
+    @Override
+    public List<User> getUsers() {
+        return new ArrayList<>(users.values());
     }
 }

@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import java.io.IOException;
+import java.util.List;
 
 @Repository("userDAO")
 public class UserDAO implements IUserDAO {
@@ -24,5 +25,10 @@ public class UserDAO implements IUserDAO {
     @Override
     public User getUser(int userId) throws IOException {
         return userRepository.findById(userId).orElse(null);
+    }
+
+    @Override
+    public List<User> getUsers() throws IOException {
+        return (List<User>) userRepository.findAll();
     }
 }

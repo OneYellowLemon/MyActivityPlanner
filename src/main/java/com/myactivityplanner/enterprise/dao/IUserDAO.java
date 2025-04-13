@@ -3,6 +3,7 @@ package com.myactivityplanner.enterprise.dao;
 import com.myactivityplanner.enterprise.dto.User;
 
 import java.io.IOException;
+import java.util.List;
 
 public interface IUserDAO {
     /**
@@ -21,4 +22,11 @@ public interface IUserDAO {
      * @throws IOException If a database error occurs
      */
     User getUser(int userId) throws IOException;
+
+    /**
+     * Get all users
+     * @return A list of all users
+     * @throws IOException If a database error occurs
+     */
+    List<User> getUsers() throws IOException;
 }
