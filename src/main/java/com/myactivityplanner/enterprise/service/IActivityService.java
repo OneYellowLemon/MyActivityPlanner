@@ -75,7 +75,7 @@ public interface IActivityService {
     /**
      * Delete an activity
      * @param activityId The ID of the activity to delete
-     * @return The ID of the deleted activity
+     * @return The ID of the deleted activity, or -1 if not found
      * @throws Exception If an error occurs
      */
     int deleteActivity(int activityId) throws Exception;

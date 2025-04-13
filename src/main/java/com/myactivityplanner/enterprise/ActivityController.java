@@ -72,7 +72,8 @@ public class ActivityController {
     @ResponseBody
     public ResponseEntity<Activity> getActivity(@PathVariable int id) {
         try {
-            return ResponseEntity.ok(activityService.getActivity(id));
+            Activity activity = activityService.getActivity(id);
+            return activity == null ? ResponseEntity.notFound().build() : ResponseEntity.ok(activity);
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
         }
@@ -102,7 +103,8 @@ public class ActivityController {
     @ResponseBody
     public ResponseEntity<Integer> deleteActivity(@PathVariable int id) {
         try {
-            return ResponseEntity.ok(activityService.deleteActivity(id));
+            int deletedId = activityService.deleteActivity(id);
+            return deletedId == -1 ? ResponseEntity.notFound().build() : ResponseEntity.ok(deletedId);
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
         }

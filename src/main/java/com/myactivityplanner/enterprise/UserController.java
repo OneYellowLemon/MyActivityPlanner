@@ -38,7 +38,8 @@ public class UserController {
     @ResponseBody
     public ResponseEntity<String> getUserName(@PathVariable int userId) {
         try {
-            return ResponseEntity.ok(userService.getUserName(userId));
+            String userName = userService.getUserName(userId);
+            return userName != null ? ResponseEntity.ok(userName) : ResponseEntity.status(HttpStatus.NOT_FOUND).build();
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
         }
