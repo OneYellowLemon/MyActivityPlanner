@@ -99,6 +99,11 @@
         </div>
     </a>
 </div>
+
+<div class="map-content mb-4">
+    <button class="btn btn-primary" th:onclick="'window.location.href=\'/PersonalActivities?userId=' + ${userId} + '\''" type="button">My Activity List</button>
+</div>
+
 <div class="map-content">
     <h2 th:text="'Activities - ' + ${#temporals.format(date, 'MM/dd/yyyy')}"></h2>
     <div class="col activities">
