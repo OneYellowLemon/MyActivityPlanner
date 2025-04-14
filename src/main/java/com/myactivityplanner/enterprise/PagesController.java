@@ -33,11 +33,7 @@ public class PagesController {
 
         // Attempt to auto login if userId is provided
         if (userId != null) {
-            try {
-                return "redirect:/AvailableActivities?userId=" + userId;
-            } catch (Exception e) {
-                // Empty catch block (if auto login fails, just show normal login page)
-            }
+            return "redirect:/AvailableActivities?userId=" + userId;
         }
 
         return "index";
@@ -48,7 +44,7 @@ public class PagesController {
      * @return AvailableActivities.html
      */
     @RequestMapping("AvailableActivities")
-    public String AvailableActivities(Model model, @RequestParam(required = false) Integer userId) {
+    public String AvailableActivities(Model model, @RequestParam(required = false) Integer userId, @RequestParam(required = false) LocalDate date) {
         try {
             // Redirect to login page if userId is null
             if (userId == null) {
@@ -58,6 +54,61 @@ public class PagesController {
             // Ensure user is valid
             if (userService.getUserName(userId) == null) {
                 return "redirect:/?invalidUser=true";
+            }
+
+            model.addAttribute("userId", userId);
+
+            if (date == null) {
+                date = LocalDate.now();
+            }
+
+            model.addAttribute("date", date);
+
+            LocalDate today = LocalDate.now();
+            LocalDate tomorrow = today.plusDays(1);
+            LocalDate day3 = today.plusDays(2);
+            LocalDate day4 = today.plusDays(3);
+            LocalDate day5 = today.plusDays(4);
+            LocalDate day6 = today.plusDays(5);
+            LocalDate day7 = today.plusDays(6);
+
+            model.addAttribute("today", today);
+            model.addAttribute("tomorrow", tomorrow);
+            model.addAttribute("day3", day3);
+            model.addAttribute("day4", day4);
+            model.addAttribute("day5", day5);
+            model.addAttribute("day6", day6);
+            model.addAttribute("day7", day7);
+
+            List<Activity> activitiesToday = activityService.getActivitiesForDate(LocalDate.now());
+            List<Activity> activitiesTomorrow = activityService.getActivitiesForDate(tomorrow);
+            List<Activity> activitiesDay3 = activityService.getActivitiesForDate(day3);
+            List<Activity> activitiesDay4 = activityService.getActivitiesForDate(day4);
+            List<Activity> activitiesDay5 = activityService.getActivitiesForDate(day5);
+            List<Activity> activitiesDay6 = activityService.getActivitiesForDate(day6);
+            List<Activity> activitiesDay7 = activityService.getActivitiesForDate(day7);
+            model.addAttribute("activitiesToday", activitiesToday);
+            model.addAttribute("activitiesTomorrow", activitiesTomorrow);
+            model.addAttribute("activitiesDay3", activitiesDay3);
+            model.addAttribute("activitiesDay4", activitiesDay4);
+            model.addAttribute("activitiesDay5", activitiesDay5);
+            model.addAttribute("activitiesDay6", activitiesDay6);
+            model.addAttribute("activitiesDay7", activitiesDay7);
+
+            if (date.toString().equals(today.toString())) {
+                model.addAttribute("availableActivities", activitiesToday);
+            } else if (date.toString().equals(tomorrow.toString())) {
+                model.addAttribute("availableActivities", activitiesTomorrow);
+            } else if (date.toString().equals(day3.toString())) {
+                model.addAttribute("availableActivities", activitiesDay3);
+            } else if (date.toString().equals(day4.toString())) {
+                model.addAttribute("availableActivities", activitiesDay4);
+            } else if (date.toString().equals(day5.toString())) {
+                model.addAttribute("availableActivities", activitiesDay5);
+            } else if (date.toString().equals(day6.toString())) {
+                model.addAttribute("availableActivities", activitiesDay6);
+            } else if (date.toString().equals(day7.toString())) {
+                model.addAttribute("availableActivities", activitiesDay7);
             }
         } catch (Exception e) {
             return "redirect:/error?message=" + e.getMessage();
@@ -79,7 +130,22 @@ public class PagesController {
      * @return AddOrRemoveActivity.html
      */
     @RequestMapping("AddOrRemoveActivity")
-    public String AddOrRemoveActivity() {
+    public String AddOrRemoveActivity(Model model, @RequestParam(required = false) Integer userId, @RequestParam(required = false) Integer activityId) {
+        try {
+            // Redirect to login page if userId is null
+            if (userId == null) {
+                return "redirect:/";
+            }
+
+            // Ensure user is valid
+            if (userService.getUserName(userId) == null) {
+                return "redirect:/?invalidUser=true";
+            }
+
+            model.addAttribute("userId", userId);
+        } catch (Exception e) {
+            return "redirect:/error?message=" + e.getMessage();
+        }
         return "AddOrRemoveActivity";
     }
 

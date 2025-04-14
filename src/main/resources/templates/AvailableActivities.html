@@ -1,44 +1,122 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Title</title>
+    <title>Available Activities</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+
+    <style>
+        .map-content {
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+
+        .day-selector {
+            width: 10vw;
+            height: 10vh;
+        }
+
+        /* This class is used, appended by Thymeleaf */
+        /*noinspection CssUnusedSymbol*/
+        .selected-day {
+            background-color: lightgray;
+        }
+
+        .activities {
+            max-height: 65vh;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+    </style>
 </head>
 
 <body>
-<div class="container">
-    <div class="row">
-        <div class="col-sm">
-            <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
+<h1 class="text-center py-4 mb-0">Available Activities</h1>
+
+<div class="d-flex justify-content-between mb-4 map-content">
+    <a th:href="@{/AvailableActivities(userId=${param.userId}, date=${today})}" class="text-decoration-none text-reset">
+        <div class="border day-selector text-center d-flex flex-column justify-content-center" th:classappend="${#temporals.format(date, 'MM/dd/yyyy') == #temporals.format(today, 'MM/dd/yyyy')} ? 'selected-day' : ''">
+            <h3>Today</h3>
+            <p class="mb-0" th:if="${activitiesToday.size() == 0}" th:text="'No activities'" />
+            <p class="mb-0" th:if="${activitiesToday.size() == 1}" th:text="'1 activity'" />
+            <p class="mb-0" th:if="${activitiesToday.size() > 1}" th:text="${activitiesToday.size()} + ' activities'" />
         </div>
-        <div class="col-sm">
-            <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
+    </a>
+
+    <a th:href="@{/AvailableActivities(userId=${param.userId}, date=${tomorrow})}" class="text-decoration-none text-reset">
+        <div class="border day-selector text-center d-flex flex-column justify-content-center" th:classappend="${#temporals.format(date, 'MM/dd/yyyy') == #temporals.format(tomorrow, 'MM/dd/yyyy')} ? 'selected-day' : ''">
+            <h3>Tomorrow</h3>
+            <p class="mb-0" th:if="${activitiesTomorrow.size() == 0}" th:text="'No activities'" />
+            <p class="mb-0" th:if="${activitiesTomorrow.size() == 1}" th:text="'1 activity'" />
+            <p class="mb-0" th:if="${activitiesTomorrow.size() > 1}" th:text="${activitiesTomorrow.size()} + ' activities'" />
         </div>
-        <div class="col-sm">
-            <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+    </a>
+
+    <a th:href="@{/AvailableActivities(userId=${param.userId}, date=${day3})}" class="text-decoration-none text-reset">
+        <div class="border day-selector text-center d-flex flex-column justify-content-center" th:classappend="${#temporals.format(date, 'MM/dd/yyyy') == #temporals.format(day3, 'MM/dd/yyyy')} ? 'selected-day' : ''">
+            <h3 th:text="${#temporals.format(day3, 'MM/dd')}" />
+            <p class="mb-0" th:if="${activitiesDay3.size() == 0}" th:text="'No activities'" />
+            <p class="mb-0" th:if="${activitiesDay3.size() == 1}" th:text="'1 activity'" />
+            <p class="mb-0" th:if="${activitiesDay3.size() > 1}" th:text="${activitiesDay3.size()} + ' activities'" />
+        </div>
+    </a>
+
+    <a th:href="@{/AvailableActivities(userId=${param.userId}, date=${day4})}" class="text-decoration-none text-reset">
+        <div class="border day-selector text-center d-flex flex-column justify-content-center" th:classappend="${#temporals.format(date, 'MM/dd/yyyy') == #temporals.format(day4, 'MM/dd/yyyy')} ? 'selected-day' : ''">
+            <h3 th:text="${#temporals.format(day4, 'MM/dd')}" />
+            <p class="mb-0" th:if="${activitiesDay4.size() == 0}" th:text="'No activities'" />
+            <p class="mb-0" th:if="${activitiesDay4.size() == 1}" th:text="'1 activity'" />
+            <p class="mb-0" th:if="${activitiesDay4.size() > 1}" th:text="${activitiesDay4.size()} + ' activities'" />
+        </div>
+    </a>
+
+    <a th:href="@{/AvailableActivities(userId=${param.userId}, date=${day5})}" class="text-decoration-none text-reset">
+        <div class="border day-selector text-center d-flex flex-column justify-content-center" th:classappend="${#temporals.format(date, 'MM/dd/yyyy') == #temporals.format(day5, 'MM/dd/yyyy')} ? 'selected-day' : ''">
+            <h3 th:text="${#temporals.format(day5, 'MM/dd')}" />
+            <p class="mb-0" th:if="${activitiesDay5.size() == 0}" th:text="'No activities'" />
+            <p class="mb-0" th:if="${activitiesDay5.size() == 1}" th:text="'1 activity'" />
+            <p class="mb-0" th:if="${activitiesDay5.size() > 1}" th:text="${activitiesDay5.size()} + ' activities'" />
+        </div>
+    </a>
+
+    <a th:href="@{/AvailableActivities(userId=${param.userId}, date=${day6})}" class="text-decoration-none text-reset">
+        <div class="border day-selector text-center d-flex flex-column justify-content-center" th:classappend="${#temporals.format(date, 'MM/dd/yyyy') == #temporals.format(day6, 'MM/dd/yyyy')} ? 'selected-day' : ''">
+            <h3 th:text="${#temporals.format(day6, 'MM/dd')}" />
+            <p class="mb-0" th:if="${activitiesDay6.size() == 0}" th:text="'No activities'" />
+            <p class="mb-0" th:if="${activitiesDay6.size() == 1}" th:text="'1 activity'" />
+            <p class="mb-0" th:if="${activitiesDay6.size() > 1}" th:text="${activitiesDay6.size()} + ' activities'" />
+        </div>
+    </a>
+
+    <a th:href="@{/AvailableActivities(userId=${param.userId}, date=${day7})}" class="text-decoration-none text-reset">
+        <div class="border day-selector text-center d-flex flex-column justify-content-center" th:classappend="${#temporals.format(date, 'MM/dd/yyyy') == #temporals.format(day7, 'MM/dd/yyyy')} ? 'selected-day' : ''">
+            <h3 th:text="${#temporals.format(day7, 'MM/dd')}" />
+            <p class="mb-0" th:if="${activitiesDay7.size() == 0}" th:text="'No activities'" />
+            <p class="mb-0" th:if="${activitiesDay7.size() == 1}" th:text="'1 activity'" />
+            <p class="mb-0" th:if="${activitiesDay7.size() > 1}" th:text="${activitiesDay7.size()} + ' activities'" />
+        </div>
+    </a>
+</div>
+<div class="map-content">
+    <h2 th:text="'Activities - ' + ${#temporals.format(date, 'MM/dd/yyyy')}"></h2>
+    <div class="col activities">
+        <div class="row">
+            <div th:if="${availableActivities.isEmpty()}">
+                <h4>No activities</h4>
+            </div>
+            <div th:each="activity : ${availableActivities}">
+                <h4 th:text="${activity.name}"></h4>
+
+                <div class="d-flex">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                        <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
+                    </svg>
+                    <p class="mb-0 lh-1" th:text="${activity.location}"/>
                 </div>
+
+                <button class="btn btn-secondary btn-sm mt-2 mb-3" th:onclick="'window.location.href=\'/AddOrRemoveActivity?userId=' + ${userId} + '&activityId=' + ${activity.activityId} + '\''">View Activity</button>
             </div>
         </div>
     </div>
