@@ -99,6 +99,11 @@
         </div>
     </a>
 </div>
+
+<div class="map-content mb-4">
+    <button class="btn btn-primary" th:onclick="'window.location.href=\'/PersonalActivities?userId=' + ${userId} + '\''" type="button">My Activity List</button>
+</div>
+
 <div class="map-content">
     <h2 th:text="'Activities - ' + ${#temporals.format(date, 'MM/dd/yyyy')}"></h2>
     <div class="col activities">
@@ -113,7 +118,7 @@
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
                         <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
                     </svg>
-                    <p class="mb-0 lh-1" th:text="${activity.location}"/>
+                    <p class="ms-1 mb-0 lh-1" th:text="${activity.location}"/>
                 </div>
 
                 <button class="btn btn-secondary btn-sm mt-2 mb-3" th:onclick="'window.location.href=\'/AddOrRemoveActivity?userId=' + ${userId} + '&activityId=' + ${activity.activityId} + '\''">View Activity</button>
