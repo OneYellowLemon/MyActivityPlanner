@@ -66,6 +66,23 @@ public class ActivityService implements IActivityService {
     }
 
     @Override
+    public List<Activity> getSignedUpActivitiesForUserForDate(int userId, LocalDate date) throws Exception {
+        List<UserActivity> userActivities = userActivityDAO.getAllUserActivities();
+
+        List<Activity> activities = new ArrayList<>();
+        for (UserActivity userActivity : userActivities) {
+            if (userActivity.getUser() == userId) {
+                Activity activity = activityDAO.getActivity(userActivity.getActivity());
+                if (activity.getTimestamp().equals(date)) {
+                    activities.add(activity);
+                }
+            }
+        }
+
+        return activities;
+    }
+
+    @Override
     public boolean isUserSignedUpForActivity(int userId, int activityId) throws Exception {
         List<UserActivity> userActivities = userActivityDAO.getAllUserActivities();
 

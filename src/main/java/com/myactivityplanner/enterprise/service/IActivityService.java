@@ -32,6 +32,15 @@ public interface IActivityService {
     List<Activity> getSignedUpActivitiesForUser(int userId) throws Exception;
 
     /**
+     * Get a list of activities a user is signed up for on a specific date
+     * @param userId The ID of the user to get activities for
+     * @param date The date to get activities for
+     * @return A list of activities the user is signed up for on the specified date
+     * @throws Exception If an error occurs
+     */
+    List<Activity> getSignedUpActivitiesForUserForDate(int userId, LocalDate date) throws Exception;
+
+    /**
      * Check if a user is signed up for a specified activity
      * @param userId The ID of the user to check
      * @param activityId The ID of the activity to check

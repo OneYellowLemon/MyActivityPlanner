@@ -43,6 +43,17 @@ public class ActivityServiceStub implements IActivityService {
     }
 
     @Override
+    public List<Activity> getSignedUpActivitiesForUserForDate(int userId, LocalDate date) {
+        Activity activity = new Activity();
+        activity.setActivityId(1);
+        activity.setName("Test Activity");
+        activity.setDescription("This is a test activity");
+        activity.setLocation("Test Location");
+        activity.setTimestamp(LocalDate.now());
+        return List.of(activity);
+    }
+
+    @Override
     public boolean isUserSignedUpForActivity(int userId, int activityId) {
         return true;
     }
