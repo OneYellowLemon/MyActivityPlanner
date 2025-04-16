@@ -173,6 +173,38 @@ public class ActivityController {
     }
 
     /**
+     * API endpoint to sign up a user for an activity from an HTML form
+     * @param activityId The ID of the activity to sign up for
+     * @param userId The ID of the user to sign up
+     * @return Redirect to the activity details page
+     */
+    @PostMapping("api/form/activity/signup/{activityId}/{userId}")
+    public String signUpForActivityForm(@PathVariable int activityId, @PathVariable int userId) {
+        try {
+            activityService.signUpForActivity(activityId, userId);
+            return "redirect:/AddOrRemoveActivity?userId=" + userId + "&activityId=" + activityId;
+        } catch (Exception e) {
+            return "redirect:/error?message=" + e.getMessage();
+        }
+    }
+
+    /**
+     * API endpoint to withdraw a user from an activity from an HTML form
+     * @param activityId The ID of the activity to withdraw the user from
+     * @param userId The ID of the user to withdraw
+     * @return Redirect to the activity details page
+     */
+    @PostMapping("api/form/activity/withdraw/{activityId}/{userId}")
+    public String withdrawFromActivityForm(@PathVariable int activityId, @PathVariable int userId) {
+        try {
+            activityService.withdrawFromActivity(activityId, userId);
+            return "redirect:/AddOrRemoveActivity?userId=" + userId + "&activityId=" + activityId;
+        } catch (Exception e) {
+            return "redirect:/error?message=" + e.getMessage();
+        }
+    }
+
+    /**
      * API endpoint to withdraw a user from an activity
      * @param activityId The ID of the activity to withdraw the user from
      * @param userId The ID of the user to withdraw
