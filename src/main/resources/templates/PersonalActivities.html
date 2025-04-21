@@ -36,7 +36,7 @@
 <h1 class="text-center py-4 mb-0">My Activity List</h1>
 
 <div class="d-flex justify-content-between mb-4 map-content">
-    <a th:href="@{/AvailableActivities(userId=${param.userId}, date=${today})}" class="text-decoration-none text-reset">
+    <a th:href="@{/PersonalActivities(userId=${param.userId}, date=${today})}" class="text-decoration-none text-reset">
         <div class="border day-selector text-center d-flex flex-column justify-content-center" th:classappend="${#temporals.format(date, 'MM/dd/yyyy') == #temporals.format(today, 'MM/dd/yyyy')} ? 'selected-day' : ''">
             <h3>Today</h3>
             <p class="mb-0" th:if="${activitiesToday.size() == 0}" th:text="'No activities'" />
@@ -45,7 +45,7 @@
         </div>
     </a>
 
-    <a th:href="@{/AvailableActivities(userId=${param.userId}, date=${tomorrow})}" class="text-decoration-none text-reset">
+    <a th:href="@{/PersonalActivities(userId=${param.userId}, date=${tomorrow})}" class="text-decoration-none text-reset">
         <div class="border day-selector text-center d-flex flex-column justify-content-center" th:classappend="${#temporals.format(date, 'MM/dd/yyyy') == #temporals.format(tomorrow, 'MM/dd/yyyy')} ? 'selected-day' : ''">
             <h3>Tomorrow</h3>
             <p class="mb-0" th:if="${activitiesTomorrow.size() == 0}" th:text="'No activities'" />
@@ -54,7 +54,7 @@
         </div>
     </a>
 
-    <a th:href="@{/AvailableActivities(userId=${param.userId}, date=${day3})}" class="text-decoration-none text-reset">
+    <a th:href="@{/PersonalActivities(userId=${param.userId}, date=${day3})}" class="text-decoration-none text-reset">
         <div class="border day-selector text-center d-flex flex-column justify-content-center" th:classappend="${#temporals.format(date, 'MM/dd/yyyy') == #temporals.format(day3, 'MM/dd/yyyy')} ? 'selected-day' : ''">
             <h3 th:text="${#temporals.format(day3, 'MM/dd')}" />
             <p class="mb-0" th:if="${activitiesDay3.size() == 0}" th:text="'No activities'" />
@@ -63,7 +63,7 @@
         </div>
     </a>
 
-    <a th:href="@{/AvailableActivities(userId=${param.userId}, date=${day4})}" class="text-decoration-none text-reset">
+    <a th:href="@{/PersonalActivities(userId=${param.userId}, date=${day4})}" class="text-decoration-none text-reset">
         <div class="border day-selector text-center d-flex flex-column justify-content-center" th:classappend="${#temporals.format(date, 'MM/dd/yyyy') == #temporals.format(day4, 'MM/dd/yyyy')} ? 'selected-day' : ''">
             <h3 th:text="${#temporals.format(day4, 'MM/dd')}" />
             <p class="mb-0" th:if="${activitiesDay4.size() == 0}" th:text="'No activities'" />
@@ -72,7 +72,7 @@
         </div>
     </a>
 
-    <a th:href="@{/AvailableActivities(userId=${param.userId}, date=${day5})}" class="text-decoration-none text-reset">
+    <a th:href="@{/PersonalActivities(userId=${param.userId}, date=${day5})}" class="text-decoration-none text-reset">
         <div class="border day-selector text-center d-flex flex-column justify-content-center" th:classappend="${#temporals.format(date, 'MM/dd/yyyy') == #temporals.format(day5, 'MM/dd/yyyy')} ? 'selected-day' : ''">
             <h3 th:text="${#temporals.format(day5, 'MM/dd')}" />
             <p class="mb-0" th:if="${activitiesDay5.size() == 0}" th:text="'No activities'" />
@@ -81,7 +81,7 @@
         </div>
     </a>
 
-    <a th:href="@{/AvailableActivities(userId=${param.userId}, date=${day6})}" class="text-decoration-none text-reset">
+    <a th:href="@{/PersonalActivities(userId=${param.userId}, date=${day6})}" class="text-decoration-none text-reset">
         <div class="border day-selector text-center d-flex flex-column justify-content-center" th:classappend="${#temporals.format(date, 'MM/dd/yyyy') == #temporals.format(day6, 'MM/dd/yyyy')} ? 'selected-day' : ''">
             <h3 th:text="${#temporals.format(day6, 'MM/dd')}" />
             <p class="mb-0" th:if="${activitiesDay6.size() == 0}" th:text="'No activities'" />
@@ -90,7 +90,7 @@
         </div>
     </a>
 
-    <a th:href="@{/AvailableActivities(userId=${param.userId}, date=${day7})}" class="text-decoration-none text-reset">
+    <a th:href="@{/PersonalActivities(userId=${param.userId}, date=${day7})}" class="text-decoration-none text-reset">
         <div class="border day-selector text-center d-flex flex-column justify-content-center" th:classappend="${#temporals.format(date, 'MM/dd/yyyy') == #temporals.format(day7, 'MM/dd/yyyy')} ? 'selected-day' : ''">
             <h3 th:text="${#temporals.format(day7, 'MM/dd')}" />
             <p class="mb-0" th:if="${activitiesDay7.size() == 0}" th:text="'No activities'" />
