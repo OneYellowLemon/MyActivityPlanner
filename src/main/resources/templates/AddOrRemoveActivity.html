@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,21 +10,17 @@
 
 <body>
 <div class="container">
-    <div class="card" >
-        <img src="..." class="card-img-top" alt="...">
+    <div class="card text-white bg-secondary mb-3" style="max-width: 18rem" >
+
         <div class="card-body">
-            <h5 class="card-title">Event Activity</h5>
-            <p class="card-text">Enter Time, Date, Place, Attire of event.</p>
-            <label for="Time">Time</label>
-            <input type="text" id="Time">
-            <label for="Date">Date</label>
-            <input type="text" id="Date">
-            <label for="Place">Place</label>
-            <input type="text" id="Place">
-            <label for="Attire">Attire</label>
-            <input type="text" id="Attire">
-            <a href="#" class="btn btn-success">Add Event</a>
-            <a href="#" class="btn btn-danger">Delete Event</a>
+            <p th:text="${activity.name}"/>
+            <p th:text="${activity.location}">
+            <p th:text="${activity.timestamp}">
+            <p th:text="${activity.description}">
+
+            <form th:action="@{'/api/form/activity/signup/' + ${activity.activityId} + '/' + ${userId}}" method="post"><button type="submit" class="btn btn-success" th:if="${signup == false}">Sign Up</button></form>
+            <form th:action="@{'/api/form/activity/withdraw/' + ${activity.activityId} + '/' + ${userId}}" method="post"><button type="submit" class="btn btn-danger" th:if="${signup}">Unregister</button></form>
+
         </div>
     </div>
 </div>
