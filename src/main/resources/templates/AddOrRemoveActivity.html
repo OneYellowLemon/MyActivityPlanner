@@ -45,7 +45,9 @@
     <div class="d-flex justify-content-center gap-1">
         <form th:action="@{'/api/form/activity/signup/' + ${activity.activityId} + '/' + ${userId}}" method="post"><button type="submit" class="btn btn-success" th:if="${!signup}">Sign Up</button></form>
         <form th:action="@{'/api/form/activity/withdraw/' + ${activity.activityId} + '/' + ${userId}}" method="post"><button type="submit" class="btn btn-danger" th:if="${signup}">Withdraw</button></form>
-        <button class="btn btn-secondary" th:onclick="'history.back()'">Go Back</button>
+
+        <a class="btn btn-secondary" th:if="${fromMyActivities}" th:href="@{'/PersonalActivities?userId=' + ${userId} + '&date=' + ${#temporals.format(activity.timestamp, 'yyyy-MM-dd')}}">Go Back</a>
+        <a class="btn btn-secondary" th:if="${!fromMyActivities}" th:href="@{'/AvailableActivities?userId=' + ${userId} + '&date=' + ${#temporals.format(activity.timestamp, 'yyyy-MM-dd')}}">Go Back</a>
     </div>
 </div>
 
