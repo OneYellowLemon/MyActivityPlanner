@@ -198,7 +198,7 @@ public class PagesController {
      * @return AddOrRemoveActivity.html
      */
     @RequestMapping("AddOrRemoveActivity")
-    public String AddOrRemoveActivity(Model model, @RequestParam(required = false) Integer userId, @RequestParam(required = false) Integer activityId) {
+    public String AddOrRemoveActivity(Model model, @RequestParam(required = false) Integer userId, @RequestParam(required = false) Integer activityId, @RequestParam(required = false) boolean fromMyActivities) {
         try {
             // Redirect to login page if userId is null
             if (userId == null) {
@@ -211,6 +211,8 @@ public class PagesController {
             }
 
             model.addAttribute("userId", userId);
+
+            model.addAttribute("fromMyActivities", fromMyActivities);
 
             Activity activity = activityService.getActivity(activityId);
             model.addAttribute("activity", activity);
