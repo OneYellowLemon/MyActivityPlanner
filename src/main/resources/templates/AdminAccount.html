@@ -72,7 +72,7 @@
                     <textarea class="form-control" id="activity-description" rows="4" maxlength="500" required th:field="*{description}"></textarea>
                 </div>
                 <button type="submit" class="btn btn-primary" th:text="${editMode ? 'Save Activity' : 'Create Activity'}"></button>
-                <button type="button" class="btn btn-secondary" th:if="${editMode}" th:onclick="'window.location.href=\'/AdminAccount\''">Cancel</button>
+                <a class="btn btn-secondary" href="/AdminAccount">Cancel</a>
             </form>
         </div>
 
@@ -103,7 +103,7 @@
                 </div>
                 <div th:each="activity : ${activitiesToday}" class="mb-2">
                     <h5 th:text="${activity.name}"></h5>
-                    <button class="btn btn-secondary btn-sm" th:onclick="'window.location.href=\'?editId=' + ${activity.activityId} + '\''">Edit</button>
+                    <a class="btn btn-secondary btn-sm" th:href="@{/AdminAccount(editId=${activity.activityId})}">Edit</a>
                     <form th:action="@{'/api/form/activity/delete/' + ${activity.activityId}}" method="post" style="display:inline;">
                         <button type="submit" class="btn btn-danger btn-sm">Delete</button>
                     </form>
@@ -119,7 +119,7 @@
                 </div>
                 <div th:each="activity : ${activitiesTomorrow}" class="mb-2">
                     <h5 th:text="${activity.name}"></h5>
-                    <button class="btn btn-secondary btn-sm" th:onclick="'window.location.href=\'?editId=' + ${activity.activityId} + '\''">Edit</button>
+                    <a class="btn btn-secondary btn-sm" th:href="@{/AdminAccount(editId=${activity.activityId})}">Edit</a>
                     <form th:action="@{'/api/form/activity/delete/' + ${activity.activityId}}" method="post" style="display:inline;">
                         <button type="submit" class="btn btn-danger btn-sm">Delete</button>
                     </form>
@@ -135,7 +135,7 @@
                 </div>
                 <div th:each="activity : ${activitiesDay3}" class="mb-2">
                     <h5 th:text="${activity.name}"></h5>
-                    <button class="btn btn-secondary btn-sm" th:onclick="'window.location.href=\'?editId=' + ${activity.activityId} + '\''">Edit</button>
+                    <a class="btn btn-secondary btn-sm" th:href="@{/AdminAccount(editId=${activity.activityId})}">Edit</a>
                     <form th:action="@{'/api/form/activity/delete/' + ${activity.activityId}}" method="post" style="display:inline;">
                         <button type="submit" class="btn btn-danger btn-sm">Delete</button>
                     </form>
@@ -151,7 +151,7 @@
                 </div>
                 <div th:each="activity : ${activitiesDay4}" class="mb-2">
                     <h5 th:text="${activity.name}"></h5>
-                    <button class="btn btn-secondary btn-sm" th:onclick="'window.location.href=\'?editId=' + ${activity.activityId} + '\''">Edit</button>
+                    <a class="btn btn-secondary btn-sm" th:href="@{/AdminAccount(editId=${activity.activityId})}">Edit</a>
                     <form th:action="@{'/api/form/activity/delete/' + ${activity.activityId}}" method="post" style="display:inline;">
                         <button type="submit" class="btn btn-danger btn-sm">Delete</button>
                     </form>
@@ -167,7 +167,7 @@
                 </div>
                 <div th:each="activity : ${activitiesDay5}" class="mb-2">
                     <h5 th:text="${activity.name}"></h5>
-                    <button class="btn btn-secondary btn-sm" th:onclick="'window.location.href=\'?editId=' + ${activity.activityId} + '\''">Edit</button>
+                    <a class="btn btn-secondary btn-sm" th:href="@{/AdminAccount(editId=${activity.activityId})}">Edit</a>
                     <form th:action="@{'/api/form/activity/delete/' + ${activity.activityId}}" method="post" style="display:inline;">
                         <button type="submit" class="btn btn-danger btn-sm">Delete</button>
                     </form>
@@ -183,7 +183,7 @@
                 </div>
                 <div th:each="activity : ${activitiesDay6}" class="mb-2">
                     <h5 th:text="${activity.name}"></h5>
-                    <button class="btn btn-secondary btn-sm" th:onclick="'window.location.href=\'?editId=' + ${activity.activityId} + '\''">Edit</button>
+                    <a class="btn btn-secondary btn-sm" th:href="@{/AdminAccount(editId=${activity.activityId})}">Edit</a>
                     <form th:action="@{'/api/form/activity/delete/' + ${activity.activityId}}" method="post" style="display:inline;">
                         <button type="submit" class="btn btn-danger btn-sm">Delete</button>
                     </form>
@@ -199,7 +199,7 @@
                 </div>
                 <div th:each="activity : ${activitiesDay7}" class="mb-2">
                     <h5 th:text="${activity.name}"></h5>
-                    <button class="btn btn-secondary btn-sm" th:onclick="'window.location.href=\'?editId=' + ${activity.activityId} + '\''">Edit</button>
+                    <a class="btn btn-secondary btn-sm" th:href="@{/AdminAccount(editId=${activity.activityId})}">Edit</a>
                     <form th:action="@{'/api/form/activity/delete/' + ${activity.activityId}}" method="post" style="display:inline;">
                         <button type="submit" class="btn btn-danger btn-sm">Delete</button>
                     </form>

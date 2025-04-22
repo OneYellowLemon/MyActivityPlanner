@@ -103,7 +103,7 @@
 <p class="map-content">Showing all available activities; to go to your Activity List (activities you have signed up for), click the button below:</p>
 
 <div class="map-content mb-2">
-    <button class="btn btn-primary" th:onclick="'window.location.href=\'/PersonalActivities?userId=' + ${userId} + '\''" type="button">My Activity List</button>
+    <a class="btn btn-primary" th:href="@{/PersonalActivities(userId=${userId})}">My Activity List</a>
 </div>
 
 <div class="map-content mb-4">
@@ -127,7 +127,7 @@
                     <p class="ms-1 mb-0 lh-1" th:text="${activity.location}"/>
                 </div>
 
-                <button class="btn btn-secondary btn-sm mt-2 mb-3" th:onclick="'window.location.href=\'/AddOrRemoveActivity?userId=' + ${userId} + '&activityId=' + ${activity.activityId} + '\''">View Activity</button>
+                <a class="btn btn-secondary mt-2 mb-3" th:href="@{/AddOrRemoveActivity(userId=${userId}, activityId=${activity.activityId})}">View Activity</a>
             </div>
         </div>
     </div>

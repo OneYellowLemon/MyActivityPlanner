@@ -103,7 +103,7 @@
 <p class="map-content">This is your Activity List, showing activities you have signed up for. To go back to a list of all activities, click the button below:</p>
 
 <div class="map-content mb-2">
-    <button class="btn btn-primary" th:onclick="'window.location.href=\'/AvailableActivities?userId=' + ${userId} + '\''" type="button">Available Activities</button>
+    <a class="btn btn-primary" th:href="@{/AvailableActivities(userId=${param.userId})}">Available Activities</a>
 </div>
 
 <div class="map-content mb-4">
@@ -126,8 +126,7 @@
                     </svg>
                     <p class="ms-1 mb-0 lh-1" th:text="${activity.location}"/>
                 </div>
-
-                <button class="btn btn-secondary btn-sm mt-2 mb-3" th:onclick="'window.location.href=\'/AddOrRemoveActivity?userId=' + ${userId} + '&activityId=' + ${activity.activityId} + '&fromMyActivities=true' + '\''">View Activity</button>
+                <a class="btn btn-secondary mt-2 mb-3" th:href="@{/AddOrRemoveActivity(userId=${userId}, activityId=${activity.activityId}, fromMyActivities=true)}">View Activity</a>
             </div>
         </div>
     </div>
