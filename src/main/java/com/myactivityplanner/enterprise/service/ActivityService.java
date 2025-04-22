@@ -122,6 +122,10 @@ public class ActivityService implements IActivityService {
 
     @Override
     public Activity saveActivity(Activity activity) throws Exception {
+        if (activity.getTimestamp().isBefore(LocalDate.now())) {
+            throw new Exception("Activity date cannot be in the past!");
+        }
+
         return activityDAO.saveActivity(activity);
     }
 
