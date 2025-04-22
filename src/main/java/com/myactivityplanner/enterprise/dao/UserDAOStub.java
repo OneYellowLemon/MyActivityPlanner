@@ -1,6 +1,7 @@
 package com.myactivityplanner.enterprise.dao;
 
 import com.myactivityplanner.enterprise.dto.User;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
@@ -9,6 +10,7 @@ import java.util.List;
 import java.util.Map;
 
 @Repository
+@Profile("test")
 public class UserDAOStub implements IUserDAO {
     Map<Integer, User> users = new HashMap<>();
 
