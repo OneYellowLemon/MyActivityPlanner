@@ -113,7 +113,7 @@
 <div class="map-content">
     <h2 th:text="'Activities - ' + ${#temporals.format(date, 'MM/dd/yyyy')}"></h2>
     <div class="col activities">
-        <div class="row">
+        <div class="row text-break">
             <div th:if="${availableActivities.isEmpty()}">
                 <h4>No activities</h4>
             </div>

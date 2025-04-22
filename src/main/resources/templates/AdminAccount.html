@@ -102,7 +102,7 @@
                     <p>No activities</p>
                 </div>
                 <div th:each="activity : ${activitiesToday}" class="mb-2">
-                    <h5 th:text="${activity.name}"></h5>
+                    <h5 class="text-break" th:text="${activity.name}"></h5>
                     <a class="btn btn-secondary" th:href="@{/AdminAccount(editId=${activity.activityId})}">Edit</a>
                     <form th:action="@{'/api/form/activity/delete/' + ${activity.activityId}}" method="post" style="display:inline;">
                         <button type="submit" class="btn btn-danger">Delete</button>
@@ -118,7 +118,7 @@
                     <p>No activities</p>
                 </div>
                 <div th:each="activity : ${activitiesTomorrow}" class="mb-2">
-                    <h5 th:text="${activity.name}"></h5>
+                    <h5 class="text-break" th:text="${activity.name}"></h5>
                     <a class="btn btn-secondary" th:href="@{/AdminAccount(editId=${activity.activityId})}">Edit</a>
                     <form th:action="@{'/api/form/activity/delete/' + ${activity.activityId}}" method="post" style="display:inline;">
                         <button type="submit" class="btn btn-danger">Delete</button>
@@ -134,7 +134,7 @@
                     <p>No activities</p>
                 </div>
                 <div th:each="activity : ${activitiesDay3}" class="mb-2">
-                    <h5 th:text="${activity.name}"></h5>
+                    <h5 class="text-break" th:text="${activity.name}"></h5>
                     <a class="btn btn-secondary" th:href="@{/AdminAccount(editId=${activity.activityId})}">Edit</a>
                     <form th:action="@{'/api/form/activity/delete/' + ${activity.activityId}}" method="post" style="display:inline;">
                         <button type="submit" class="btn btn-danger">Delete</button>
@@ -150,7 +150,7 @@
                     <p>No activities</p>
                 </div>
                 <div th:each="activity : ${activitiesDay4}" class="mb-2">
-                    <h5 th:text="${activity.name}"></h5>
+                    <h5 class="text-break" th:text="${activity.name}"></h5>
                     <a class="btn btn-secondary" th:href="@{/AdminAccount(editId=${activity.activityId})}">Edit</a>
                     <form th:action="@{'/api/form/activity/delete/' + ${activity.activityId}}" method="post" style="display:inline;">
                         <button type="submit" class="btn btn-danger">Delete</button>
@@ -166,7 +166,7 @@
                     <p>No activities</p>
                 </div>
                 <div th:each="activity : ${activitiesDay5}" class="mb-2">
-                    <h5 th:text="${activity.name}"></h5>
+                    <h5 class="text-break" th:text="${activity.name}"></h5>
                     <a class="btn btn-secondary" th:href="@{/AdminAccount(editId=${activity.activityId})}">Edit</a>
                     <form th:action="@{'/api/form/activity/delete/' + ${activity.activityId}}" method="post" style="display:inline;">
                         <button type="submit" class="btn btn-danger">Delete</button>
@@ -182,7 +182,7 @@
                     <p>No activities</p>
                 </div>
                 <div th:each="activity : ${activitiesDay6}" class="mb-2">
-                    <h5 th:text="${activity.name}"></h5>
+                    <h5 class="text-break" th:text="${activity.name}"></h5>
                     <a class="btn btn-secondary" th:href="@{/AdminAccount(editId=${activity.activityId})}">Edit</a>
                     <form th:action="@{'/api/form/activity/delete/' + ${activity.activityId}}" method="post" style="display:inline;">
                         <button type="submit" class="btn btn-danger">Delete</button>
@@ -198,7 +198,7 @@
                     <p>No activities</p>
                 </div>
                 <div th:each="activity : ${activitiesDay7}" class="mb-2">
-                    <h5 th:text="${activity.name}"></h5>
+                    <h5 class="text-break" th:text="${activity.name}"></h5>
                     <a class="btn btn-secondary" th:href="@{/AdminAccount(editId=${activity.activityId})}">Edit</a>
                     <form th:action="@{'/api/form/activity/delete/' + ${activity.activityId}}" method="post" style="display:inline;">
                         <button type="submit" class="btn btn-danger">Delete</button>
@@ -208,7 +208,7 @@
         </div>
 
         <h2 class="users-title">Users</h2>
-        <div class="users">
+        <div class="users text-break">
             <div th:if="${users.isEmpty()}">
                 <p>No users</p>
             </div>
