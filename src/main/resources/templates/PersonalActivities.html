@@ -102,8 +102,12 @@
 
 <p class="map-content">This is your Activity List, showing activities you have signed up for. To go back to a list of all activities, click the button below:</p>
 
-<div class="map-content mb-4">
+<div class="map-content mb-2">
     <button class="btn btn-primary" th:onclick="'window.location.href=\'/AvailableActivities?userId=' + ${userId} + '\''" type="button">Available Activities</button>
+</div>
+
+<div class="map-content mb-4">
+    <a class="btn btn-danger" href="/">Sign out</a>
 </div>
 
 <div class="map-content">
