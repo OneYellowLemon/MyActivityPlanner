@@ -6,7 +6,7 @@ IT4045C Enterprise Application Development
 
 My Activity Planner is an application for individuals living in assisted living that allows them to see a list of activities for a given day and sign up for them.
 An administration page allows management of the activities, including creating new activities, editing existing activities, and deleting activities.
-Users of the app can view activities day by day with details including the activity name, date and time, location, and description. Users can sign up for activities, view the activities they have signed up for, and withdraw from activities.
+Users of the app can view activities day by day with details including the activity name, date, location, and description. Users can sign up for activities, view the activities they have signed up for, and withdraw from activities.
 
 ## Storyboard
 
@@ -40,7 +40,7 @@ Users of the app can view activities day by day with details including the activ
 
 **When**: The user enters an invalid user ID
 
-**Then**: An error message is shown stating "This user does not exist!"
+**Then**: An error message is shown stating the requested user does not exist
 
 ---
 
@@ -50,7 +50,7 @@ Users of the app can view activities day by day with details including the activ
 
 **When**: The application is loaded to the default page
 
-**Then**: All available activities for today are shown in chronological order
+**Then**: All available activities for today are shown
 
 ---
 
@@ -58,7 +58,7 @@ Users of the app can view activities day by day with details including the activ
 
 **When**: The user clicks on Today
 
-**Then**: All available activities for today are shown in chronological order
+**Then**: All available activities for today are shown
 
 ---
 
@@ -68,7 +68,7 @@ Users of the app can view activities day by day with details including the activ
 
 **When**: The user clicks on a different date
 
-**Then**: All available activities for that day are shown in chronological order
+**Then**: All available activities for that day are shown
 
 ---
 
@@ -78,7 +78,7 @@ Users of the app can view activities day by day with details including the activ
 
 **When**: The user clicks "My Activity List"
 
-**Then**: A list of activities the user has signed up for is visible with entries containing activity name, date, and time
+**Then**: A list of activities the user has signed up for is visible with entries containing activity name and date
 
 ---
 
@@ -88,15 +88,7 @@ Users of the app can view activities day by day with details including the activ
 
 **When**: The user clicks on a specific activity
 
-**Then**: Details about that activity are displayed, including activity name, date, time, location, and brief description, as well as a list of users that have already signed up for that activity.
-
----
-
-**Given**: The user has authenticated, and the user is looking at their activity list
-
-**When**: The user clicks on a specific activity
-
-**Then**: Details about that activity are displayed, including activity name, date, time, location, and brief description, as well as a list of users that have already signed up for that activity.
+**Then**: Details about that activity are displayed, including activity name, date, location, and brief description.
 
 ---
 
@@ -104,25 +96,9 @@ Users of the app can view activities day by day with details including the activ
 
 **Given**: The user has authenticated, and a specific activity is currently being viewed that is not already part of the user's "My Activity List"
 
-**When**: The user clicks "Add to My Activities"
+**When**: The user clicks "Sign Up"
 
 **Then**: The activity is added to the user's list of activities
-
----
-
-**Given**: A user is adding an activity to their activity list and has clicked "Add to My Activities"
-
-**When**: The activity has successfully been added
-
-**Then**: A success confirmation is displayed to the user with the message `<activity name> at <date and time> has been added to your activities.`
-
----
-
-**Given**: A specific activity is currently being viewed that is not already part of the user's "My Activity List" and occurs at the same time as another activity on the user's "My Activity List"
-
-**When**: The user clicks "Add to My Activities"
-
-**Then**: A failure message is displayed to the user with the message `You already have an activity at this time!` and the activity is not added to the user's activity list
 
 ---
 
@@ -130,33 +106,25 @@ Users of the app can view activities day by day with details including the activ
 
 **Given**: The user has authenticated, and a specific activity is currently being viewed that is already part of the user's "My Activity List"
 
-**When**: The user clicks "Remove from My Activities"
+**When**: The user clicks "Withdraw"
 
 **Then**: The activity is removed from the user's list of activities
 
 ---
 
-**Given**: A user is removing an activity from their activity list and has clicked "Remove from My Activities"
-
-**When**: The activity has successfully been removed
-
-**Then**: A success confirmation is displayed to the user with the message `<activity name> at <date and time> has been removed from your activities.`
-
----
-
 ### 10. As an admin, I can create new activities so that I can make them available to users
 
-**Given**: The admin page is open and the user has entered data in fields: name, date and time, location, and description
+**Given**: The admin page is open and the user has entered data in fields: name, date, location, and description
 
-**When**: The user clicks "Add Activity"
+**When**: The user clicks "Create Activity"
 
-**Then**: The activity is created and a success confirmation is displayed with the message `<activity name> at <date and time> has been created.` and the input fields are cleared
+**Then**: The activity is created and the input fields are cleared
 
 ---
 
-**Given**: The admin page is open and the user has entered data in date and time fields with the selected date and time in the past
+**Given**: The admin page is open and the user has entered data in date field with the selected date in the past
 
-**When**: The user clicks "Add Activity"
+**When**: The user clicks "Create Activity"
 
 **Then**: An error message is returned indicating the activity could not be created in the past
 
@@ -168,7 +136,7 @@ Users of the app can view activities day by day with details including the activ
 
 **When**: The user clicks the edit button on an existing activity
 
-**Then**: The existing name, date and time, and description of the activity are loaded into the edit fields
+**Then**: The existing name, date, location, and description of the activity are loaded into the edit fields
 
 ---
 
@@ -176,7 +144,7 @@ Users of the app can view activities day by day with details including the activ
 
 **When**: The user clicks "Save Activity"
 
-**Then**: The activity is updated and a success confirmation is displayed with the message `The activity has been updated.` Additionally, the input fields are cleared and the button reverts back to a "Add Activity" button
+**Then**: The activity is updated, the input fields are cleared, and the "Save Activity" button reverts back to a "Create Activity" button
 
 ---
 
@@ -186,7 +154,7 @@ Users of the app can view activities day by day with details including the activ
 
 **When**: The user clicks the delete button on an existing activity
 
-**Then**: The activity is deleted and a success confirmation is displayed with the message `<activity name> at <date and time> has been deleted.`
+**Then**: The activity is deleted.
 
 ---
 
@@ -196,7 +164,7 @@ Users of the app can view activities day by day with details including the activ
 
 **When**: The user clicks "Add User"
 
-**Then**: The user is created and a success confirmation is displayed with the message `User has been created with ID: <new user ID>` and the input fields are cleared
+**Then**: The user is created and the input fields are cleared
 
 ## Class Diagram
 
@@ -213,10 +181,12 @@ com.myactivityplanner.enterprise:
 - EnterpriseApplication: Start up application server
 - ActivityController: Endpoints for working with activities
 - UserController: Endpoints for working with users
+- PagesController: Handle UI pages
 
 com.myactivityplanner.enterprise.dto:
 - User: Store user information
 - Activity: Store activity information
+- UserActivity: Store User -> Activity mappings
 
 com.myactivityplanner.enterprise.service:
 - ActivityServiceStub: Stub class for activity service
@@ -243,6 +213,7 @@ com.myactivityplanner.enterprise.service:
 com.myactivityplanner.enterprise.dao:
 - IActivityDAO: Interface for persisting activities; to be implemented by ActivityDAO
 - IUserDAO: Interface for persisting users; to be implemented by UserDAO
+- IUserActivityDAO: Interface for persisting user to activity mappings; to be implemented by UserActivityDAO
 ```
 
 #### Methods:
@@ -250,29 +221,35 @@ com.myactivityplanner.enterprise.dao:
 ```
 IActivityService:
 - getUsersSignedUpForActivity(activityId: int): List<User> - Returns a list of users who have signed up for a specific activity
-- getActivitiesForDate(date: java.util.Date): List<Activity> - Returns a list of Activity objects that occur on the specified Date
+- getActivitiesForDate(date: java.time.LocalDate): List<Activity> - Returns a list of Activity objects that occur on the specified Date
 - getSignedUpActivitiesForUser(userId: int): List<Activity> - Returns a list of Activity objects that the specified user has signed up for.
 - isUserSignedUpForActivity(userId: int, activityId: int): boolean - Returns true if the specified user is signed up for the specified activity
-- signUpForActivity(activityId: int, userId: int): boolean - Signs the specified user up for the specified activity
-- withdrawFromActivity(activityId: int, userId: int): boolean
+- signUpForActivity(activityId: int, userId: int): void - Signs the specified user up for the specified activity
+- withdrawFromActivity(activityId: int, userId: int): void - Withdraws the specified user from the specified activity
+- getActivity(activityId: int): Activity - Returns an activity by ID
+- saveActivity(activity: Activity): Activity - Upsert an Activity by ID and returns the updated/inserted activity object
+- deleteActivity(activityId: int): int - Delete an activity by ID and returns the ID of the deleted activity
 
 IUserService:
-- getUserName(userId: int): String - Return the full name of the specified user in the format firstname, lastname
+- createUser(firstName: String, lastName: String): User - Creates a new user and returns the created User object
+- getUserName(userId: int): String - Returns the full name of the specified user in the format: firstname, lastname
+- getUsers(): List<User> - Returns a list of all User objects 
 
 IUserActivityDAO:
-- isUserSignedUpForActivity(userId: int, activityId: int): boolean - Returns true if the specified user is signed up for the specified activity
-- signUpUser(userId: int, activityId: int): boolean - Creates a record in the UserActivity table with the specified userId and activityId. Returns true if successful.
-- withdrawUser(userId: int, activityId: int): boolean - Deletes a record in the UserActivity table with the specified userId and activityId. Returns true if successful.
+- getAllUserActivities(): List<UserActivity> - Returns a list of all UserActivity objects
+- signUpUser(userId: int, activityId: int): void - Creates a record in the UserActivity table with the specified userId and activityId.
+- withdrawUser(userId: int, activityId: int): void - Deletes a record in the UserActivity table with the specified userId and activityId.
 
 IActivityDAO:
 - getActivity(activityId: int): Activity - Returns an Activity object by ID
 - getActivities(): List<Activity> - Returns a list of all Activity objects
-- saveActivity(activity: Activity): boolean - Update an existing Activity if it exists, otherwise, create a new Activity. Returns true if successful, otherwise, false.
-- deleteActivity(activityId: int): boolean - Delete an Activity. Returns true if successful, otherwise, false.
+- saveActivity(activity: Activity): Activity - Update an existing Activity if it exists, otherwise, create a new Activity. Returns updated/inserted activity object
+- deleteActivity(activityId: int): void - Delete an Activity.
 
 IUserDAO:
-- createUser(firstName: String, lastName: String): boolean - Create a new User with the specified first and last name. Returns true if successful, otherwise, false.
-- getUser(userId: int): User - Get a user by ID
+- createUser(firstName: String, lastName: String): User - Create a new user with the specified first and last name. Returns the created user object
+- getUser(userId: int): User - Returns a user by ID
+- getUsers(): List<User> - Returns a list of all users
 ```
 
 ## JSON Schema
