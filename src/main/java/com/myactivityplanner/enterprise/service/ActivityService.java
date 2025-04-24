@@ -137,6 +137,14 @@ public class ActivityService implements IActivityService {
             return -1;
         }
 
+        // Delete any user activities associated with this activity
+        List<UserActivity> userActivities = userActivityDAO.getAllUserActivities();
+        for (UserActivity userActivity : userActivities) {
+            if (userActivity.getActivity() == activityId) {
+                userActivityDAO.withdrawUser(userActivity.getUser(), activityId);
+            }
+        }
+
         activityDAO.deleteActivity(activityId);
         return activityId;
     }
